@@ -13,7 +13,7 @@ export default function Header() {
 
 	return (
 		<header>
-			<a id="rootLogo">
+			<a id="rootLogo" href="\">
 				<img src={rootLogo} alt="go to the root or home" />
 			</a>
 			<nav className='largenav'>
@@ -23,7 +23,7 @@ export default function Header() {
 					<li><a href="">./experience</a></li>
 				</ul>
 			</nav>
-			<button className='largenav' id="resume"><a href="">Resume</a></button>
+			<button className='largenav' id="resume"><a href="https://drive.google.com/file/d/11G1CC_lACHDYSAScYctRg0zv7wPOJmIx/view?usp=sharing" target="_blank">Resume</a></button>
 			<div id='hamb' onClick={handleModalOpen}>
 				<RiMenu3Fill color="#182828" fontSize="2.5rem" />
 			</div>
@@ -39,7 +39,7 @@ export default function Header() {
 						<li><a href="">./experience</a></li>
 					</ul>
 				</nav>
-				<button id="resume"><a href="">Resume</a></button>
+				<button id="resume"><a href="https://drive.google.com/file/d/11G1CC_lACHDYSAScYctRg0zv7wPOJmIx/view?usp=sharing" target="_blank">Resume</a></button>
 			</div>
 		</header>
 	)
