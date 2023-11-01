@@ -45,6 +45,7 @@
 .project_description .tools {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .project_description .tools span {
@@ -101,11 +102,11 @@
         border-bottom: 2px solid #BBBBBB;
         border-bottom-left-radius: 0px;
         border-top-right-radius: 16px;
-        border-right: 0;
     }
     .project_description {
         width: 100%;
-        margin-left: 15px;
+        padding: 15px;
+        padding-top: 0;
     }
     .project_description h2 {
         font-size: 20px;
