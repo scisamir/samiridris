@@ -2,6 +2,8 @@ import rootLogo from '/root.svg'
 import { RiMenu3Fill } from 'react-icons/ri'
 import { AiOutlineClose } from 'react-icons/ai'
 
+import './styles.css'
+
 export default function Header() {
 
 	const handleModalClose = () => {

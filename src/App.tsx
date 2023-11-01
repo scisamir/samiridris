@@ -1,16 +1,18 @@
 import './App.css'
-import Footer from './layout/footer'
-import Header from './layout/header'
-import HomePage from './pages/homepage'
+import Footer from './layout/Footer/Footer'
+import Header from './layout/Header/Header'
+import HomePage from './pages/Homepage/Homepage'
+import Projects from './pages/Projects/Projects'
 
 function App() {
 
   return (
     <>
       <Header />
-      <main>
-        <HomePage />
-      </main>
+      {/* <main> */}
+      <HomePage />
+      <Projects />
+      {/* </main> */}
       <Footer />
     </>
   )

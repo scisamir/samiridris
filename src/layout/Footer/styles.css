@@ -1,0 +1,38 @@
+footer {
+    background: #C2B280;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    padding: 0.5rem 0;
+    z-index: 99999;
+    border-top: 2px solid #182828;
+}
+  
+footer > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+    footer > ul {
+      gap: 60px;
+    }
+    footer > ul > li > a > * {
+      font-size: 2.5rem;
+    }
+  }
+  
+@media screen and (max-width: 425px) {
+    footer > ul {
+      gap: 50px;
+    }
+    footer > ul > li > a > * {
+      font-size: 2rem;
+    }
+}

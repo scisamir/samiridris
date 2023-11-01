@@ -1,0 +1,56 @@
+@keyframes arrowDown {
+    0% {
+        padding-top: 0;
+    } 50% {
+        padding-top: 15px;
+    } 100% {
+        padding-top: 0;
+    }
+}
+
+section#homepage {
+  background: #182828;
+  padding-top: 180px;
+  min-height: 91vh;
+}
+
+#name {
+    color: #ffffff;
+    font-size: 8rem;
+    margin-bottom: 10px;
+}
+
+#intro {
+    color: #d9d9d9;
+    font-size: 2rem;
+}
+  
+#arrDown {
+    margin-top: 60px;
+    animation: arrowDown 1.1s infinite ease-in-out;
+}
+
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+    #name {
+      font-size: 5rem;
+    }
+    #intro {
+      font-size: 1.5rem;
+    }
+}
+  
+@media screen and (max-width: 425px) {
+    #name {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    #intro {
+      font-size: 1.2rem;
+    }
+    #arrDown > * {
+      font-size: 3rem;
+    }
+}

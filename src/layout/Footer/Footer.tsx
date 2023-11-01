@@ -2,6 +2,8 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { BsTwitter } from 'react-icons/bs'
 import { BiLogoGmail } from 'react-icons/bi'
 
+import './styles.css'
+
 export default function Footer() {
 	return (
 		<footer>
