@@ -9,7 +9,7 @@ const Project = ({
     }: ProjectProps) => {
     return (
         <div className="project_card">
-            <img className="project_image" src={`/src/images/${image_src}`} alt={p_head} />
+            <img className="project_image" src={`/${image_src}`} alt={p_head} />
             <div className="project_description">
                 <h2>{p_head}</h2>
                 <p className="description">{description}</p>
