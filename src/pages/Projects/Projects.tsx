@@ -1,5 +1,4 @@
 import Project from './Project/Project';
-import restaurant from '../../images/little_lemon_restaurant.jpg';
 import MyProjects from '../../static/projects';
 
 import './styles.css'
