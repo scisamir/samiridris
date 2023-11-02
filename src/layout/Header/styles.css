@@ -4,11 +4,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: auto; */
   position: fixed;
   top: 0;
   width: 100vw;
   height: 10vh;
+  min-height: 60px;
   z-index: 99999;
   border-bottom: 2px solid #182828;
 }

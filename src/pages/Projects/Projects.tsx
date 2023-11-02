@@ -11,6 +11,7 @@ const Projects = () => {
                 MyProjects.map((myproject) => {
                     return (
                         <Project
+                            key={myproject.p_head}
                             image_src={myproject.image_src}
                             p_head={myproject.p_head}
                             description={myproject.description}
