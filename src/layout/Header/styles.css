@@ -18,7 +18,7 @@ nav {
 
 label.logo {
   display: inline-block;
-  line-height: 105px;
+  margin-top: calc((70px - 3rem) / 2);
   padding: 0 30px;
 }
 
@@ -79,7 +79,7 @@ a.resume {
 
 .hamb {
   float: right;
-  line-height: 95px;
+  margin-top: calc((70px - 2.5rem) / 2);
   margin-right: 20px;
   cursor: pointer;
   display: none;

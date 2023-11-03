@@ -8,6 +8,7 @@ import './styles.css'
 export default function Header() {
 
 	useEffect(() => {
+		// handle scroll
 		const handleScroll = () => {
 			const sections = document.querySelectorAll("section");
 			const links = document.querySelectorAll("nav a")
@@ -18,7 +19,6 @@ export default function Header() {
 				const sectionHeight = section.clientHeight;
 				if (scrollPosition >= (sectionTop - 300) && scrollPosition < sectionTop + sectionHeight) {
 					const section_id = section.getAttribute("id") || "";
-					console.log(`scrollPosition: ${scrollPosition}, sectionTop: ${sectionTop}, sectionHeight: ${sectionHeight}`);
 
 					links.forEach((link) => {
 						if (link.getAttribute("href")?.includes(section_id)) {
@@ -31,10 +31,26 @@ export default function Header() {
 			}
 		};
 
+		// handle link click
+		const checkbox = document.getElementById("check") as HTMLInputElement;
+		const page_links = document.getElementsByClassName("page_link");
+		const handleLinkClick = () => {
+			checkbox.checked = false;
+		};
+
+		// add scroll event listener
 		window.addEventListener("scroll", handleScroll);
+
+		// add link click event listener
+		for (const page_link of page_links) {
+			page_link.addEventListener("click", handleLinkClick);
+		}
 
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
+			for (const page_link of page_links) {
+				page_link.removeEventListener("click", handleLinkClick);
+			}
 		};
 	}, []);
 
@@ -52,9 +68,9 @@ export default function Header() {
 					</a>
 				</label>
 				<ul>
-					<li><a href="#homepage">./home</a></li>
-					<li><a href="#projects">./projects</a></li>
-					<li><a href="#">./experience</a></li>
+					<li><a href="#homepage" className='page_link active'>./home</a></li>
+					<li><a href="#projects" className='page_link'>./projects</a></li>
+					<li><a href="#" className='page_link'>./experience</a></li>
 					<li><button><a className="resume" href="https://drive.google.com/file/d/11G1CC_lACHDYSAScYctRg0zv7wPOJmIx/view?usp=sharing" target="_blank">Resume</a></button></li>
 				</ul>
 			</nav>
