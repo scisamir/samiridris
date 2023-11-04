@@ -1,4 +1,4 @@
-@keyframes hamb_close_anim {
+@keyframes hambAnim {
   0% {
     transform: rotate(-180deg);
   }
@@ -86,7 +86,7 @@ a.resume {
 }
 
 .hamb_child {
-  animation: hamb_close_anim .5s ease-in-out;
+  animation: hambAnim .5s ease-in-out;
 }
 
 .hamb_close {
@@ -123,7 +123,7 @@ a.resume {
   }
   nav > ul > li > button {
     margin-left: 0;
-    margin-top: 70px;
+    margin-top: 50px;
   }
   #check:checked ~ ul {
     left: 0;

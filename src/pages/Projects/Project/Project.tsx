@@ -21,10 +21,10 @@ const Project = ({
                     }
                 </div>
                 <div className="project_buttons">
-                    <a href={site_link}>
+                    <a href={site_link} target="_blank">
                         <button><FiLink2 /> Visit Site</button>
                     </a>
-                    <a href={github_link}>
+                    <a href={github_link} target="_blank">
                         <button className="github_bt"><AiFillGithub /> Github</button>
                     </a>
                 </div>

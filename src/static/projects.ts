@@ -1,8 +1,16 @@
-const MyProjects = [
+const MyProjects = [ 
+    {
+        image_src: "project5.jpg",
+        p_head: "Portfolio v1.0",
+        description: "My Developer Portfolio v1.0. The site currently in view",
+        tools: ["HTML", "CSS", "TypeScript", "React"],
+        site_link: "/",
+        github_link: "https://github.com/scisamir/samiridris"
+    },
     {
         image_src: "project0.jpg",
         p_head: "Little Lemon Restaurant",
-        description: "Little Lemon Restaurant is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.",
+        description: "Little Lemon Restaurant is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist",
         tools: ["HTML", "CSS", "React"],
         site_link: "https://scisamir-little-lemon.vercel.app/",
         github_link: "https://github.com/scisamir/meta-frontend-developer-capstone"
@@ -48,9 +56,17 @@ const MyProjects = [
         github_link: "https://github.com/scisamir/metabnb-hngi9-stage3"
     },
     {
+        image_src: "project6.jpg",
+        p_head: "Portfolio v0",
+        description: "My first portfolio website built in 2020. I used php in the hosting site to make messages sent to me through the \"Contact\" section go directly to my email",
+        tools: ["HTML", "CSS", "JavaScript"],
+        site_link: "https://idrissamir.netlify.app/",
+        github_link: "https://idrissamir.netlify.app/"
+    },
+    {
         image_src: "projectd1.png",
         p_head: "Static Website on AWS",
-        description: "This project AWS to host a static website. It used AWS bucket, static web hosting, and AWS CloudFront",
+        description: "This project used AWS to host a static website. It used AWS bucket, static web hosting, and AWS CloudFront",
         tools: ["AWS", "Bucket", "CloudFront",],
         site_link: "https://github.com/scisamir/deploy_static_website_on_aws",
         github_link: "https://github.com/scisamir/deploy_static_website_on_aws"
@@ -58,7 +74,7 @@ const MyProjects = [
     {
         image_src: "project4.jpg",
         p_head: "Productivae",
-        description: "Productivae lets you mange your activities by allowing you to create, mark, and delete tasks",
+        description: "Productivae lets you manage your activities by allowing you to create, mark, and delete tasks",
         tools: ["HTML", "CSS", "React", "LocalStorage"],
         site_link: "https://h9sx89.csb.app/",
         github_link: "https://github.com/scisamir/productivae"

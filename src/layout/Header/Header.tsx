@@ -70,7 +70,7 @@ export default function Header() {
 				<ul>
 					<li><a href="#homepage" className='page_link active'>./home</a></li>
 					<li><a href="#projects" className='page_link'>./projects</a></li>
-					<li><a href="#" className='page_link'>./experience</a></li>
+					<li><a href="#experience" className='page_link'>./experience</a></li>
 					<li><button><a className="resume" href="https://drive.google.com/file/d/11G1CC_lACHDYSAScYctRg0zv7wPOJmIx/view?usp=sharing" target="_blank">Resume</a></button></li>
 				</ul>
 			</nav>

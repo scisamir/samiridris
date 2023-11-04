@@ -7,7 +7,7 @@ const Projects = () => {
     return (
         <section id="projects">
             <h2>Projects</h2>
-            {
+            {MyProjects &&
                 MyProjects.map((myproject) => {
                     return (
                         <Project

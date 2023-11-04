@@ -1,0 +1,23 @@
+section#experience {
+    padding-bottom: 120px;
+    padding-top: 70px;
+    background: #182828;
+}
+
+section#experience h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.exp {
+    margin: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
+.exp h3 {
+    color: #d9d9d9;
+}
