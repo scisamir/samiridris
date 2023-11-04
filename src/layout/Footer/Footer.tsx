@@ -1,6 +1,5 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
-// import { BsTwitter } from 'react-icons/bs'
-import { FaXTwitter } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import { BiLogoGmail } from 'react-icons/bi'
 
 import './styles.css'
@@ -16,7 +15,7 @@ export default function Footer() {
 					<AiFillLinkedin color="black" fontSize="3rem" />
 				</a></li>
 				<li><a href="https://twitter.com/ScientistSamir" target="_blank">
-					<FaXTwitter color="black" fontSize="3rem" />
+					<FaXTwitter color="black" fontSize="2.5rem" />
 				</a></li>
 				<li><a href="mailto:samzidris11@gmail.com">
 					<BiLogoGmail color="black" fontSize="3rem" />
