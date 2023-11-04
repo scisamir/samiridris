@@ -1,6 +1,6 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 // import { BsTwitter } from 'react-icons/bs'
-import { FaXTwitter } from 'react-icons'
+import { FaXTwitter } from 'react-icons/fa'
 import { BiLogoGmail } from 'react-icons/bi'
 
 import './styles.css'
