@@ -14,11 +14,11 @@ export default function Footer() {
 				<li><a href="https://linkedin.com/in/scisamir" target="_blank">
 					<AiFillLinkedin color="black" fontSize="3rem" />
 				</a></li>
-				<li><a href="https://twitter.com/ScientistSamir" target="_blank">
-					<FaXTwitter color="black" fontSize="2.5rem" />
-				</a></li>
 				<li><a href="mailto:samzidris11@gmail.com">
 					<BiLogoGmail color="black" fontSize="3rem" />
+				</a></li>
+				<li><a href="https://twitter.com/ScientistSamir" target="_blank">
+					<FaXTwitter color="black" fontSize="2.5rem" />
 				</a></li>
 			</ul>
 		</footer>
