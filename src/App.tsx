@@ -4,6 +4,7 @@ import Header from './layout/Header/Header'
 import Experience from './pages/Experience/Experience'
 import HomePage from './pages/Homepage/Homepage'
 import Projects from './pages/Projects/Projects'
+import About from './pages/About/About'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <HomePage />
       <Projects />
       <Experience />
+      <About />
       <Footer />
     </>
   )

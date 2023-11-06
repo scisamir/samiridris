@@ -35,7 +35,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   line-height: 70px;
-  margin: 0 15px;
+  margin: 0 10px;
   font-size: 20px;
 }
 
@@ -66,7 +66,7 @@ nav > ul > li > a.active:after {
 }
 
 nav > ul > li > button {
-  margin-left: calc(30vw - 200px);
+  margin-left: calc(30vw - 210px);
   background: #182828;
   padding: 0.5rem 1.5rem;
   border-radius: 16px;
@@ -99,6 +99,20 @@ a.resume {
 
 
 /* RESPONSIVENESS */
+@media screen and (max-width: 1024px) {
+  nav > ul > li > button {
+    margin-left: calc(30vw - 220px);
+  }
+}
+@media screen and (max-width: 966px) {
+  nav ul li {
+    margin: 0 3px;
+  }
+  nav > ul > li > button {
+    margin-left: calc(30vw - 220px);
+  }
+}
+
 @media screen and (max-width: 845px) {
   .hamb {
     display: block;
@@ -115,7 +129,7 @@ a.resume {
   }
   nav ul li {
     display: block;
-    margin: 50px 0;
+    margin: 32px 0;
     line-height: 30px;
   }
   nav ul li a {
@@ -123,7 +137,7 @@ a.resume {
   }
   nav > ul > li > button {
     margin-left: 0;
-    margin-top: 50px;
+    margin-top: 24px;
   }
   #check:checked ~ ul {
     left: 0;

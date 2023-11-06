@@ -1,0 +1,73 @@
+section#about {
+    background: #d9d9d9;
+    padding-top: 70px;
+    padding-bottom: 120px;
+    padding: 70px 100px 70px 100px;
+    border-bottom: 2px solid #182828;
+}
+
+section#about > h2 {
+    margin-bottom: 50px;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+section#about > div > figure {
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+section#about > div > figure > figcaption {
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+section#about > div .myPix {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    border: 2px solid #182828;
+}
+
+section#about > div p {
+    font-size: 16px;
+    text-align: left;
+    text-indent: 40px;
+    margin-bottom: 10px;
+}
+
+/* section#about > div p::before {
+    content: "me";
+    width: 30px;
+} */
+
+
+/* Copyright */
+section#copyright {
+    background: #d9d9d9;
+    padding-bottom: 90px;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+section#copyright span {
+    color: #FF0000;
+}
+
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+    section#about {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section#about > div > figure {
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
