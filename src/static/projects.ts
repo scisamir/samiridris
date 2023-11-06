@@ -48,7 +48,7 @@ const MyProjects = [
         github_link: "https://github.com/scisamir/AirBnB_clone"
     },
     {
-        image_src: "project3.png",
+        image_src: "project3.jpg",
         p_head: "Metabnb",
         description: "Metabnb provides you access to luxury and affordable houses in the metaverse, get a chance to turn your imagination to reality at your comfort zone",
         tools: ["HTML", "CSS", "React", "BootStrap"],
@@ -64,7 +64,7 @@ const MyProjects = [
         github_link: "https://idrissamir.netlify.app/"
     },
     {
-        image_src: "projectd1.png",
+        image_src: "projectd1.jpg",
         p_head: "Static Website on AWS",
         description: "This project used AWS to host a static website. It used AWS bucket, static web hosting, and AWS CloudFront",
         tools: ["AWS", "Bucket", "CloudFront",],
@@ -80,7 +80,7 @@ const MyProjects = [
         github_link: "https://github.com/scisamir/productivae"
     },
     {
-        image_src: "projectd0.jpeg",
+        image_src: "projectd0.jpg",
         p_head: "Cloud Formation",
         description: "This project deploys a web application with AWS CloudFormation",
         tools: ["AWS", "CloudFormation", "Networking"],
