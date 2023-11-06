@@ -48,15 +48,6 @@ section#about > div p {
     margin-bottom: 10px;
 }
 
-section#about > div p ul {
-    list-style: disc;
-    margin-bottom: 10px;
-}
-
-section#about > div p ul ul {
-    list-style: none;
-}
-
 section#about > div p > ul > li > span {
     font-weight: 900;
 }
