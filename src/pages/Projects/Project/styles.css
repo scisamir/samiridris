@@ -1,11 +1,12 @@
 .project_card {
-    background: #C2B280;
+    /* background: #C2B280; */
+    background: #FFFFFF;
     width: 80%;
     height: 280px;
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    border: 1px solid #BBBBBB;
+    border: 2px solid #EEEEEE;
     border-radius: 16px;
     text-align: left;
     margin-bottom: 50px;
@@ -16,7 +17,7 @@
     height: 100%;
     width: 40%;
     object-fit: cover;
-    border-right: 2px solid #BBBBBB;
+    /* border-right: 2px solid #BBBBBB; */
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
@@ -49,10 +50,10 @@
 }
 
 .project_description .tools span {
-    background: #EEEEEE;
+    background: #EDF2F7;
     padding: 4px 10px;
     border-radius: 2px;
-    color: #182828;
+    color: #1A202C;
     font-size: 14px;
 }
 
@@ -78,8 +79,8 @@
 }
 
 .project_card .project_buttons .github_bt {
-    background: #EEEEEE;
-    color: black;
+    background: #EDF2F7;
+    color: #1A202C;
 }
 
 
@@ -98,8 +99,8 @@
     }
     .project_image {
         width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #BBBBBB;
+        /* border-right: none;
+        border-bottom: 2px solid #BBBBBB; */
         border-bottom-left-radius: 0px;
         border-top-right-radius: 16px;
     }

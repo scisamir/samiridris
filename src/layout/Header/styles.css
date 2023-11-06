@@ -41,8 +41,10 @@ nav ul li {
 
 nav > ul > li > a {
   color: #182828;
-  padding: 7px 13px;
+  padding: 7px 10px;
   position: relative;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 nav > ul > li > a:after {
@@ -66,7 +68,7 @@ nav > ul > li > a.active:after {
 }
 
 nav > ul > li > button {
-  margin-left: calc(30vw - 210px);
+  margin-left: calc(30vw - 250px);
   background: #182828;
   padding: 0.5rem 1.5rem;
   border-radius: 16px;
@@ -99,21 +101,16 @@ a.resume {
 
 
 /* RESPONSIVENESS */
-@media screen and (max-width: 1024px) {
-  nav > ul > li > button {
-    margin-left: calc(30vw - 220px);
-  }
-}
-@media screen and (max-width: 966px) {
+/* @media screen and (max-width: 1024px) {
   nav ul li {
     margin: 0 3px;
   }
   nav > ul > li > button {
     margin-left: calc(30vw - 220px);
   }
-}
+} */
 
-@media screen and (max-width: 845px) {
+@media screen and (max-width: 1024px) {
   .hamb {
     display: block;
   }

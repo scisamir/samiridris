@@ -6,7 +6,6 @@ import {
         BiLogoJavascript,
         BiLogoTypescript,
         BiLogoPython,
-        BiLogoFigma,
         BiLogoAws,
         BiLogoTailwindCss,
         BiLogoBootstrap,
@@ -17,6 +16,7 @@ import {
 import { TbHexagonLetterC, TbSql,TbBrandNextjs } from 'react-icons/tb';
 import { BsGit } from 'react-icons/bs';
 import { SiGnubash, SiChakraui, SiAnsible, SiPrometheus } from 'react-icons/si';
+import figma from '../../assets/figma.jpg';
 
 const Experience = () => {
     return (
@@ -47,16 +47,16 @@ const Experience = () => {
                     <BiLogoTailwindCss className="expIcon" color="#61dbfb" fontSize="4rem" />
                     <h3>TailwindCSS</h3>
                 </div>
-                <div className='exp'>
-                    <BiLogoFigma className="expIcon" color="#e34c26" fontSize="4rem" />
-                    <h3>Figma</h3>
-                </div>
+            <div className='exp'>
+                <img src={figma} alt="figma logo" style={{height: "3.6rem"}}/>
+                <h3>Figma</h3>
+            </div>
                 <div className='exp'>
                     <BiLogoBootstrap className="expIcon" color="#563d7c" fontSize="4rem" />
                     <h3>BootStrap</h3>
                 </div>
                 <div className='exp'>
-                    <SiChakraui className="expIcon" color="#61dbfb" fontSize="4rem" />
+                    <SiChakraui className="expIcon" color="#61dbfb" fontSize="3.6rem" />
                     <h3>ChakraUI</h3>
                 </div>
                 <div className='exp'>
@@ -80,11 +80,11 @@ const Experience = () => {
                     <h3>Kubernetes</h3>
                 </div>
                 <div className='exp'>
-                    <SiAnsible className="expIcon" color="#1a1918" fontSize="4rem" />
+                    <SiAnsible className="expIcon" color="#1a1918" fontSize="3.6rem" />
                     <h3>Ansible</h3>
                 </div>
                 <div className='exp'>
-                    <SiPrometheus className="expIcon" color="#ff4646" fontSize="4rem" />
+                    <SiPrometheus className="expIcon" color="#ff4646" fontSize="3.6rem" />
                     <h3>Prometheus</h3>
                 </div>
                 <div className='exp'>

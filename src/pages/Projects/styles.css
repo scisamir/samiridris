@@ -5,7 +5,8 @@ section#projects {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #d9d9d9;
+    /* background: #FFFFF7; */
+    background: linear-gradient(70deg, rgb(248 228 260 / 24%) 0%, rgb(107 148 148 / 0%) 39%, rgb(166 236 250 / 13%) 100%);
 }
 
 section#projects > h2 {
