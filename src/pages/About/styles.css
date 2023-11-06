@@ -50,7 +50,6 @@ section#about > div p {
 
 section#about > div p ul {
     list-style: disc;
-    /* margin-left: 150px; */
     margin-bottom: 10px;
 }
 
