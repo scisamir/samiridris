@@ -22,14 +22,6 @@ const Projects = () => {
                     )
                 })
             }
-            {/* <Project
-                image_src={restaurant}
-                p_head="Little Lemon Restaurant"
-                description="Little Lemon Restaurant is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."
-                tools={["HTML", "CSS", "React"]}
-                site_link="https://scisamir-little-lemon.vercel.app/"
-                github_link="https://github.com/scisamir/meta-frontend-developer-capstone"
-            /> */}
         </section>
     );
 }

@@ -87,11 +87,11 @@ a.resume {
   display: none;
 }
 
-.hamb_child {
+.hambChild {
   animation: hambAnim .5s ease-in-out;
 }
 
-.hamb_close {
+.hambClose {
   display: none;
 }
 
@@ -101,14 +101,6 @@ a.resume {
 
 
 /* RESPONSIVENESS */
-/* @media screen and (max-width: 1024px) {
-  nav ul li {
-    margin: 0 3px;
-  }
-  nav > ul > li > button {
-    margin-left: calc(30vw - 220px);
-  }
-} */
 
 @media screen and (max-width: 1024px) {
   .hamb {
@@ -139,10 +131,10 @@ a.resume {
   #check:checked ~ ul {
     left: 0;
   }
-  #check:checked ~ label .hamb_close {
+  #check:checked ~ label .hambClose {
     display: inline-block;
   }
-  #check:checked ~ label .hamb_open {
+  #check:checked ~ label .hambOpen {
     display: none;
   }
 }
