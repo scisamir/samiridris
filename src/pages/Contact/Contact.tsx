@@ -1,16 +1,61 @@
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify'
 import { CiLocationOn } from 'react-icons/ci';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaXTwitter } from 'react-icons/fa6';
 import gmail from '../../assets/gmail.jpg';
+import 'react-toastify/dist/ReactToastify.css';
 import './styles.css'
 
 
 const Contact = () => {
+    const [ formState, setFormState ] = useState({
+        name: "",
+        email: "",
+        title: "",
+        message: ""
+    });
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormState((prevState) => ({
+            ...prevState,
+            [e.target.name]: e.target.value
+        }))
+    }
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        // Send Email
+        emailjs.send(
+            "portfolio_contact",
+            "template_3p5l5wk",
+            formState,
+            import.meta.env.VITE_PUBLIC_KEY
+        )
+        .then((res) => {
+            toast.success("Thanks! Your message has been successfully sent.");
+            console.log("SUCCESS", res.status, res.text);
+        }, (err) => {
+            toast.error("Oops! Your message was unable to be sent. Please try again.");
+            console.log("FAILED...", err);
+        });
+
+        setFormState({
+            name: "",
+            email: "",
+            title: "",
+            message: ""
+        });
+    }
+
     return (
         <>
             <section id="contact">
                 <h2>Contact Me</h2>
+                <ToastContainer theme='dark' position='bottom-center' />
                 <div>
                     <div id='contactInfo'>
                         <h3>Contact Info</h3>
@@ -56,12 +101,12 @@ const Contact = () => {
                         </div>
                     </div>
                     <div id='contactForm'>
-                        <form action="">
+                        <form onSubmit={handleSubmit}>
                             <h3>Message Me</h3>
-                            <input required type="text" name="name" id="name" placeholder="Enter your Name" />
-                            <input required type="email" name="email" id="email" placeholder="Enter your Email" />
-                            <input type="text" name="title" id="title" placeholder="Enter message Title" />
-                            <textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+                            <input required type="text" name="name" id="name" placeholder="Enter your Name" value={formState.name} onChange={handleInputChange} />
+                            <input required type="email" name="email" id="email" placeholder="Enter your Email" value={formState.email} onChange={handleInputChange} />
+                            <input type="text" name="title" id="title" placeholder="Enter message Title" value={formState.title} onChange={handleInputChange} />
+                            <textarea name="message" id="message" placeholder="Enter your message..." value={formState.message} onChange={handleInputChange}></textarea>
                             <button type="submit">Send Message</button>
                         </form>
                     </div>
