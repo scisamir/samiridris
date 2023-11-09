@@ -41,6 +41,10 @@ section#about figure button {
     margin-top: 20px;
 }
 
+section#about figure button a {
+    color: #ffffff;
+}
+
 section#about > div p {
     font-size: 16px;
     text-align: left;

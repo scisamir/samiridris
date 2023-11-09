@@ -8,7 +8,7 @@ const About = () => {
                     <figure>
                         <img className="myPix" src="/myPix.jpg" alt="A picture of me" />
                         <figcaption>Samir Idris <br /> Software Engineer</figcaption>
-                        <button id="viewResume">View Resume</button>
+                        <button id="viewResume"><a href="https://drive.google.com/file/d/11G1CC_lACHDYSAScYctRg0zv7wPOJmIx/view?usp=sharing" target="_blank">View Resume</a></button>
                     </figure>
                     
                     <div>
@@ -17,7 +17,7 @@ const About = () => {
                         <p>In 2022, I embraced an ambitious undertaking by enrolling in the rigorous ALX Software Engineering program, demanding 70 hours per week for 15 months, alongside other intensive programs such as Udacity Cloud DevOps Engineering, HNGi9 Internship, and LinuxJobber Internship. Recognizing the need for focus, I successfully completed the HNGi9 Internship (Frontend Track) and Udacity Cloud DevOps Engineering, before resuming the ALX Software Engineering program.</p>
                         <p>My journey has been fueled by dedication, discipline, perseverance, consistency, and an unwavering determination. Looking ahead, my goal is to develop software solutions that have a meaningful impact on the lives of millions. With each step, I'm evolving as a technologist, driven by the belief that technology can bring about transformative change.</p>
                         <p>Throughout the years, I've honed my skills and achieved significant milestones, ranging from web development where I've designed components, wireframes, and prototypes, to project management where I successfully led a 5-member cross-functional team to deliver a product in just 14 hours. In DevOps and deployment, I've implemented strategies that made product delivery 10 times faster and integrated configuration management tools for 10 times faster server deployment. I've also effectively used centralized structured logging to reduce response time to server errors by 95%.</p>
-                        <p>These accomplishments reflect not only my technical proficiency but also my ability to drive efficiency and innovation within a team. I believe in the limitless potential of technology to improve lives, and I am committed to continuing this journey of growth and impact."</p>
+                        <p>These accomplishments reflect not only my technical proficiency but also my ability to drive efficiency and innovation within a team. I believe in the limitless potential of technology to improve lives, and I am committed to continuing this journey of growth and impact.</p>
                     </div>
                 </div>
             </section>
