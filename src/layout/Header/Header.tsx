@@ -59,8 +59,8 @@ export default function Header() {
 			<nav>
 				<input type="checkbox" id="check" />
 				<label htmlFor="check" className='hamb'>
-					<RiMenu3Fill className="hamb_open hamb_child" color="#182828" fontSize="2.5rem" />
-					<AiOutlineClose className="hamb_close hamb_child" color="#182828" fontSize="2.5rem" />
+					<RiMenu3Fill className="hambOpen hambChild" color="#182828" fontSize="2.5rem" />
+					<AiOutlineClose className="hambClose hambChild" color="#182828" fontSize="2.5rem" />
 				</label>
 				<label className='logo'>
 					<a className="rootLogo" href="\">

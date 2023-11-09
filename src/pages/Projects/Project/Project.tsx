@@ -8,9 +8,9 @@ const Project = ({
         image_src, p_head, description, tools, site_link, github_link
     }: ProjectProps) => {
     return (
-        <div className="project_card">
-            <img className="project_image" src={`/${image_src}`} alt={p_head} />
-            <div className="project_description">
+        <div className="projectCard">
+            <img className="projectImage" src={`/${image_src}`} alt={p_head} />
+            <div className="projectDescription">
                 <h2>{p_head}</h2>
                 <p className="description">{description}</p>
                 <div className="tools">
@@ -20,12 +20,12 @@ const Project = ({
                         })
                     }
                 </div>
-                <div className="project_buttons">
+                <div className="projectButtons">
                     <a href={site_link} target="_blank">
                         <button><FiLink2 /> Visit Site</button>
                     </a>
                     <a href={github_link} target="_blank">
-                        <button className="github_bt"><AiFillGithub /> Github</button>
+                        <button className="githubBt"><AiFillGithub /> Github</button>
                     </a>
                 </div>
             </div>

@@ -1,5 +1,4 @@
-.project_card {
-    /* background: #C2B280; */
+.projectCard {
     background: #FFFFFF;
     width: 80%;
     height: 280px;
@@ -12,17 +11,16 @@
     margin-bottom: 50px;
 }
 
-.project_image {
+.projectImage {
     display: block;
     height: 100%;
     width: 40%;
     object-fit: cover;
-    /* border-right: 2px solid #BBBBBB; */
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
 
-.project_description {
+.projectDescription {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -31,25 +29,25 @@
     width: 60%;
 }
 
-.project_description h2,
-.project_description .tools,
-.project_description .description {
+.projectDescription h2,
+.projectDescription .tools,
+.projectDescription .description {
     margin-bottom: 16px;
 }
 
-.project_description .description {
+.projectDescription .description {
     margin-top: -5px;
     font-size: 14px;
     color: #343434;
 }
 
-.project_description .tools {
+.projectDescription .tools {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.project_description .tools span {
+.projectDescription .tools span {
     background: #EDF2F7;
     padding: 4px 10px;
     border-radius: 2px;
@@ -57,13 +55,13 @@
     font-size: 14px;
 }
 
-.project_buttons {
+.projectButtons {
     display: flex;
     gap: 15px;
     margin-top: 10px;
 }
 
-.project_card .project_buttons button {
+.projectCard .projectButtons button {
     padding: 10px 12px;
     font-size: 14px;
     word-spacing: -2px;
@@ -78,7 +76,7 @@
     cursor: pointer;
 }
 
-.project_card .project_buttons .github_bt {
+.projectCard .projectButtons .githubBt {
     background: #EDF2F7;
     color: #1A202C;
 }
@@ -86,38 +84,36 @@
 
 /* RESPONSIVENESS */
 @media screen and (max-width: 1024px) {
-    .project_card {
+    .projectCard {
         width: 95%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .project_card {
+    .projectCard {
         flex-direction: column;
         height: auto;
         width: 92%;
     }
-    .project_image {
+    .projectImage {
         width: 100%;
-        /* border-right: none;
-        border-bottom: 2px solid #BBBBBB; */
         border-bottom-left-radius: 0px;
         border-top-right-radius: 16px;
     }
-    .project_description {
+    .projectDescription {
         width: 100%;
         padding: 15px;
         padding-top: 0;
     }
-    .project_description h2 {
+    .projectDescription h2 {
         font-size: 20px;
     }
-    .project_description h2,
-    .project_description .tools,
-    .project_description .description {
+    .projectDescription h2,
+    .projectDescription .tools,
+    .projectDescription .description {
         margin-bottom: 12px;
     }
-    .project_buttons {
+    .projectButtons {
         margin-bottom: 30px;
     }
 }
