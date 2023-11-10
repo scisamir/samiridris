@@ -1,26 +1,11 @@
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
-import { FaXTwitter } from 'react-icons/fa6'
-import { BiLogoGmail } from 'react-icons/bi'
-
 import './styles.css'
 
-export default function Footer() {
-	return (
-		<footer>
-			<ul>
-				<li><a href="https://github.com/scisamir" target="_blank">
-					<AiFillGithub color="black" fontSize="3rem" />
-				</a></li>
-				<li><a href="https://linkedin.com/in/scisamir" target="_blank">
-					<AiFillLinkedin color="black" fontSize="3rem" />
-				</a></li>
-				<li><a href="mailto:samzidris11@gmail.com">
-					<BiLogoGmail color="black" fontSize="3rem" />
-				</a></li>
-				<li><a href="https://twitter.com/ScientistSamir" target="_blank">
-					<FaXTwitter color="black" fontSize="2.5rem" />
-				</a></li>
-			</ul>
-		</footer>
-	)
+const Footer = () => {
+    return (
+        <section id="copyright">
+            Made with <span>&#10084;</span> by Samir Idris
+        </section>
+    );
 }
+
+export default Footer;
