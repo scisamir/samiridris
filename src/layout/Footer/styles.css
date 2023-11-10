@@ -1,4 +1,5 @@
 footer {
+    display: none;
     background: #C2B280;
     position: fixed;
     bottom: 0;
@@ -20,6 +21,9 @@ footer > ul {
 /* RESPONSIVENESS */
 
 @media screen and (max-width: 768px) {
+    footer {
+      display: block;
+    }
     footer > ul {
       gap: 60px;
     }

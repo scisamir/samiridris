@@ -113,7 +113,7 @@ section#contact form button {
 /* Copyright */
 section#copyright {
     background: #182828;
-    padding-bottom: 90px;
+    padding-bottom: 15px;
     padding-top: 15px;
     font-size: 16px;
     color: #FFFFFF;
@@ -126,6 +126,12 @@ section#copyright span {
 
 
 /* RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+    section#copyright {
+        padding-bottom: 90px;
+    }
+}
+
 @media screen and (max-width: 636px) {
     section#contact {
         padding-left: 15px;
