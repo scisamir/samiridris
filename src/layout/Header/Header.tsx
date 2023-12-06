@@ -42,9 +42,9 @@ export default function Header() {
 		const nav = document.querySelector("nav");
 		const handleNavColor = () => {
 			if (checkbox.checked) {
-				nav.style.background = "#182828"
+				nav!.style.background = "#182828"
 			} else {
-				nav.style.background = "none"
+				nav!.style.background = "none"
 			}
 		};
 
