@@ -9,48 +9,53 @@
 
 nav {
   text-align: left;
-  background: #C2B280;
-  height: 70px;
+  height: 100px;
   width: 100%;
   position: fixed;
-  border-bottom: 2px solid #182828;
+  transition: all .5s;
 }
 
 label.logo {
   display: inline-block;
-  margin-top: calc((70px - 3rem) / 2);
-  padding: 0 30px;
+  margin-left: 40px;
+  height: 100px;
 }
 
 .rootLogo > img {
-  height: 3rem;
-  width: 3rem;
+  margin-top: 25px;
+  height: 50px;
 }
 
 nav ul {
-  float: right;
-  margin-right: 20px;
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  background: #182828;
+  top: 100px;
+  left: -100%;
+  text-align: center;
+  transition: all .5s;
 }
 
 nav ul li {
-  display: inline-block;
-  line-height: 70px;
-  margin: 0 10px;
-  font-size: 20px;
+  display: block;
+  margin: 32px 0;
+  line-height: 30px;
 }
 
 nav > ul > li > a {
-  color: #182828;
+  color: #EAEAEA;
   padding: 7px 10px;
   position: relative;
-  text-transform: uppercase;
-  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 nav > ul > li > a:after {
   content: "";
   position: absolute;
-  background-color: #182828;
+  background-color: #3182ce;
   height: 3px;
   width: 0;
   left: 0;
@@ -68,23 +73,24 @@ nav > ul > li > a.active:after {
 }
 
 nav > ul > li > button {
-  margin-left: calc(30vw - 250px);
-  background: #182828;
+  margin-top: 24px; 
+  background: #3182ce;
   padding: 0.5rem 1.5rem;
   border-radius: 16px;
+  border: none;
 }
 
 a.resume {
-  font-size: 20px;
   color: #D9D9D9;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .hamb {
   float: right;
-  margin-top: calc((70px - 2.5rem) / 2);
-  margin-right: 20px;
+  margin-top: calc((100px - 2.5rem) / 2);
+  margin-right: 40px;
   cursor: pointer;
-  display: none;
 }
 
 .hambChild {
@@ -99,52 +105,35 @@ a.resume {
   display: none;
 }
 
+#check:checked ~ ul {
+  left: 0;
+}
+#check:checked ~ label .hambClose {
+  display: inline-block;
+}
+#check:checked ~ label .hambOpen {
+  display: none;
+}
+
 
 /* RESPONSIVENESS */
 
-@media screen and (max-width: 1024px) {
-  .hamb {
-    display: block;
-  }
-  nav ul {
-    width: 100%;
-    position: fixed;
-    height: 100vh;
-    background: #C2B280;
-    top: 70px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  nav ul li {
-    display: block;
-    margin: 32px 0;
-    line-height: 30px;
-  }
-  nav ul li a {
-    font-size: 20px;
-  }
-  nav > ul > li > button {
-    margin-left: 0;
-    margin-top: 24px;
-  }
-  #check:checked ~ ul {
-    left: 0;
-  }
-  #check:checked ~ label .hambClose {
-    display: inline-block;
-  }
-  #check:checked ~ label .hambOpen {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 636px) {
+  label.logo {
+    margin-left: 35px;
+  }
+  .hamb {
+    margin-right: 35px;
+  }
   nav ul li {
-    margin: 24px 0;
-    line-height: 18px;
+    margin: 26px 0;
+    line-height: 24px;
   }
   nav > ul > li > button {
-    margin-top: 16px;
+    margin-top: 20px;
+  }
+  nav > ul > li > a,
+  a.resume {
+    font-size: 16px;
   }
 }

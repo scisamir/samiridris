@@ -7,7 +7,7 @@ export default function HomePage() {
 		<section id="homepage">
 			<p id="name">SAMIR IDRIS</p>
 			<p id="intro">FRONTEND DEVELOPER, DEVOPS ENGINEER</p>
-			<div id='arrDown'><BsChevronDoubleDown color="#C2B280" fontSize="4rem" /></div>
+			<div id='arrDown'><BsChevronDoubleDown color="#3498db" fontSize="4rem" /></div>
 		</section>
 	)
 }
