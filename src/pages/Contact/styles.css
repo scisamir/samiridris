@@ -100,13 +100,14 @@ section#contact form textarea {
 }
 
 section#contact form button {
-    background: #C2B280;
+    background: #3182ce;
     padding: 0.5rem 1.5rem;
     border-radius: 16px;
     font-size: 20px;
     color: #161616;
     display: block;
     margin: 0 auto;
+    border: none;
 }
 
 
