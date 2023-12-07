@@ -4,8 +4,8 @@ import { ToastContainer, toast } from 'react-toastify'
 import { CiLocationOn } from 'react-icons/ci';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { BiLogoGmail } from "react-icons/bi";
 import { FaXTwitter } from 'react-icons/fa6';
-import gmail from '../../assets/gmail.jpg';
 import 'react-toastify/dist/ReactToastify.css';
 import './styles.css'
 
@@ -85,16 +85,16 @@ const Contact = () => {
                         <p>Social Handles</p>
                         <ul>
                             <li><a href="https://linkedin.com/in/scisamir" target="_blank">
-                                <AiFillLinkedin color="#0072b1" fontSize="3rem" />
+                                <AiFillLinkedin color="#FFFFFF" fontSize="3rem" />
                             </a></li>
                             <li><a href="https://github.com/scisamir" target="_blank">
-                                <AiFillGithub color="#000000" fontSize="3rem" />
-                            </a></li>
-                            <li><a href="https://twitter.com/ScientistSamir" target="_blank">
-                                <FaXTwitter color="#000000" fontSize="2.5rem" />
+                                <AiFillGithub color="#FFFFFF" fontSize="3rem" />
                             </a></li>
                             <li><a href="mailto:samzidris11@gmail.com">
-                                <img src={gmail} alt="gmail logo" style={{height: "2.1rem"}} />
+                                <BiLogoGmail color="#FFFFFF" fontSize="3rem" />
+                            </a></li>
+                            <li><a href="https://twitter.com/ScientistSamir" target="_blank">
+                                <FaXTwitter color="#FFFFFF" fontSize="3rem" />
                             </a></li>
                         </ul>
                     </div>
