@@ -1,20 +1,53 @@
 import './styles.css'
 
 const About = () => {
+    const strengths = [
+        {
+            title: 'Research-trained builder',
+            text: 'First Class Botany graduate from Ahmadu Bello University, Zaria, and best graduating student in the department.'
+        },
+        {
+            title: 'Founder and Web3 product engineer',
+            text: 'Co-founder at Lucent Labs with hands-on experience shipping dApps, dashboards, protocol tooling, and smart contract integrations.'
+        },
+        {
+            title: 'Cross-domain curiosity',
+            text: 'Focused on the overlap between decentralized systems, AI, biotechnology, agritech, and entrepreneurship.'
+        }
+    ];
+
+    const interests = ['Web3', 'AI', 'Biotechnology', 'Agritech', 'Entrepreneurship'];
+
     return (
-            <section id="about">
-                <h2>About Me</h2>
-                <div>
-                    <figure>
-                        <img className="myPix" src="/myPix.jpg" alt="A picture of me" />
-                        <figcaption>Samir Idris <br /> Software Engineer</figcaption>
-                        <button id="viewResume"><a href="https://drive.google.com/file/d/11G1CC_lACHDYSAScYctRg0zv7wPOJmIx/view?usp=sharing" target="_blank">View Resume</a></button>
-                    </figure>
-                    
-                    <div>
-                        <p>In early 2020, driven by curiosity and a profound appreciation for technology, I embarked on a transformative journey into the tech world, overcoming challenges in theoretical learning and battling procrastination by viewing them as valuable lessons. Navigating diverse tech education, I completed challenging courses, emphasizing hands-on practice.</p>
-                        <p>As a Software Engineer, I embody a keen eye for detail, adaptability, and a commitment to continuous learning with a growth mindset. My skill set includes strong coding abilities, knowledge of computer algorithms, teamwork proficiency, and analytical reasoning.</p>
-                        <p>Marked by dedication, discipline, and an unwavering determination, my goal is to create impactful software solutions, recognizing technology's potential for transformative change. Achievements in web development, project management, and DevOps underscore my technical proficiency and the capacity to drive efficiency and innovation within a team. Committed to the boundless potential of technology to enhance lives, I persist in this journey of growth and impact.</p>
+            <section id="about" className="sectionPad lightSection">
+                <div className="sectionHeading">
+                    <p className="eyebrow">About me</p>
+                    <h2>Engineering decentralized products with a scientist's curiosity.</h2>
+                </div>
+                <div className="aboutGrid">
+                    <div className="aboutStory">
+                        <p>
+                            I am a Software Engineer and Blockchain Developer passionate about building technologies
+                            at the intersection of Web3, AI, biotechnology, and entrepreneurship.
+                        </p>
+                        <p>
+                            I graduated from Ahmadu Bello University, Zaria with First Class Honours in Botany. Alongside
+                            that academic foundation, I transitioned into software engineering and blockchain development,
+                            where I have built and contributed to applications across the Cardano and EVM ecosystems.
+                        </p>
+                        <div className="interestList" aria-label="Interests">
+                            {interests.map((interest) => (
+                                <span key={interest}>{interest}</span>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="aboutHighlights" aria-label="Profile strengths">
+                        {strengths.map((strength) => (
+                            <article key={strength.title}>
+                                <h3>{strength.title}</h3>
+                                <p>{strength.text}</p>
+                            </article>
+                        ))}
                     </div>
                 </div>
             </section>

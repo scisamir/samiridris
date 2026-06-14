@@ -52,48 +52,55 @@ const Contact = () => {
     }
 
     return (
-        <section id="contact">
-            <h2>Contact Me</h2>
+        <section id="contact" className="sectionPad darkSection">
+            <div className="sectionHeading">
+                <p className="eyebrow">Contact</p>
+                <h2>Let's talk about Web3, AI, biotech, or ambitious product ideas.</h2>
+            </div>
             <ToastContainer theme='dark' position='bottom-center' />
-            <div>
+            <div className="contactLayout">
                 <div id='contactInfo'>
-                    <h3>Contact Info</h3>
+                    <h3>Available for protocol, product, and ecosystem work.</h3>
+                    <p className="contactIntro">
+                        I am especially interested in projects that connect decentralized systems with real-world
+                        research, finance, biotechnology, agritech, and AI-enabled workflows.
+                    </p>
                     <ul>
                         <li>
                             <BsFillPersonLinesFill fontSize="2.7rem" />
                             <div>
-                                <p>Name:</p>
+                                <p>Name</p>
                                 <p className='contactDetails'>Samir Idris</p>
                             </div>
                         </li>
                         <li>
                             <CiLocationOn fontSize="3rem" />
                             <div>
-                                <p>Location:</p>
-                                <p className='contactDetails'>Abuja, Nigeria</p>
+                                <p>Location</p>
+                                <p className='contactDetails'>Abuja</p>
                             </div>
                         </li>
                         <li>
                             <AiOutlineMail fontSize="2.7rem" />
                             <div>
-                                <p>Email:</p>
+                                <p>Email</p>
                                 <p className='contactDetails'>samzidris11@gmail.com</p>
                             </div>
                         </li>
                     </ul>
                     <div id='socials'>
-                        <p>Social Handles</p>
+                        <p>Find me online</p>
                         <ul>
-                            <li><a href="https://linkedin.com/in/scisamir" target="_blank">
+                            <li><a href="https://linkedin.com/in/scisamir" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                                 <AiFillLinkedin color="#FFFFFF" fontSize="3rem" />
                             </a></li>
-                            <li><a href="https://github.com/scisamir" target="_blank">
+                            <li><a href="https://github.com/scisamir" target="_blank" rel="noreferrer" aria-label="GitHub">
                                 <AiFillGithub color="#FFFFFF" fontSize="3rem" />
                             </a></li>
-                            <li><a href="mailto:samzidris11@gmail.com">
+                            <li><a href="mailto:samzidris11@gmail.com" aria-label="Email">
                                 <BiLogoGmail color="#FFFFFF" fontSize="3rem" />
                             </a></li>
-                            <li><a href="https://twitter.com/ScientistSamir" target="_blank">
+                            <li><a href="https://twitter.com/ScientistSamir" target="_blank" rel="noreferrer" aria-label="X Twitter">
                                 <FaXTwitter color="#FFFFFF" fontSize="3rem" />
                             </a></li>
                         </ul>
@@ -101,11 +108,11 @@ const Contact = () => {
                 </div>
                 <div id='contactForm'>
                     <form onSubmit={handleSubmit}>
-                        <h3>Message Me</h3>
-                        <input required type="text" name="name" id="name" placeholder="Enter your Name" value={formState.name} onChange={handleInputChange} />
-                        <input required type="email" name="email" id="email" placeholder="Enter your Email" value={formState.email} onChange={handleInputChange} />
-                        <input type="text" name="title" id="title" placeholder="Enter message Title" value={formState.title} onChange={handleInputChange} />
-                        <textarea name="message" id="message" placeholder="Enter your message..." value={formState.message} onChange={handleInputChange}></textarea>
+                        <h3>Send a message</h3>
+                        <input required type="text" name="name" id="contact-name" placeholder="Your name" value={formState.name} onChange={handleInputChange} />
+                        <input required type="email" name="email" id="email" placeholder="Your email" value={formState.email} onChange={handleInputChange} />
+                        <input type="text" name="title" id="title" placeholder="Subject" value={formState.title} onChange={handleInputChange} />
+                        <textarea name="message" id="message" placeholder="Tell me what you are building..." value={formState.message} onChange={handleInputChange}></textarea>
                         <button type="submit">Send Message</button>
                     </form>
                 </div>

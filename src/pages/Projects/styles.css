@@ -1,15 +1,67 @@
 section#projects {
-    padding-top: 70px;
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(70deg, rgb(248 228 260 / 24%) 0%, rgb(107 148 148 / 0%) 39%, rgb(166 236 250 / 13%) 100%);
+    border-bottom: 1px solid var(--color-line);
 }
 
-section#projects > h2 {
-    margin-bottom: 50px;
-    font-weight: 900;
-    font-size: 32px;
+.projectsGrid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+.contributions {
+    background: var(--color-deep);
+    border-radius: 8px;
+    color: #f8f4ea;
+    display: grid;
+    gap: 28px;
+    grid-template-columns: 280px minmax(0, 1fr);
+    margin: 48px auto 0;
+    max-width: var(--max-width);
+    padding: 32px;
+    text-align: left;
+}
+
+.contributions h3 {
+    color: #ffffff;
+    font-size: 1.45rem;
+    line-height: 1.2;
+}
+
+.contributionGrid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contributionGrid article {
+    border: 1px solid rgba(248, 244, 234, 0.14);
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.contributionGrid h4 {
+    color: #f0b469;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.contributionGrid p {
+    color: #dbe8e4;
+    font-size: 0.92rem;
+}
+
+@media screen and (max-width: 960px) {
+    .projectsGrid,
+    .contributions,
+    .contributionGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contributions {
+        padding: 24px;
+    }
 }

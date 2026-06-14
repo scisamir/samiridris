@@ -1,102 +1,62 @@
-const MyProjects = [ 
+import { ProjectProps } from '../pages/Projects/Project/Project.type';
+
+const MyProjects: ProjectProps[] = [
     {
-        image_src: "project5.jpg",
-        p_head: "Portfolio v1.0",
-        description: "My Developer Portfolio v1.0. The site currently in view",
-        tools: ["HTML", "CSS", "TypeScript", "React"],
-        site_link: "/",
-        github_link: "https://github.com/scisamir/samiridris"
+        p_head: 'Minswap DEX',
+        image_src: 'projects/minswap.png',
+        category: 'Major protocol contribution',
+        description: 'Refactored smart contracts to Plutus V3, integrated CIP-113 support, and contributed to protocol improvements and modernization.',
+        tools: ['Cardano', 'Aiken', 'MeshJS', 'TypeScript', 'DEX'],
+        site_link: 'https://minswap.org/'
     },
     {
-        image_src: "project0.jpg",
-        p_head: "Little Lemon Restaurant",
-        description: "Little Lemon Restaurant is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist",
-        tools: ["HTML", "CSS", "React"],
-        site_link: "https://scisamir-little-lemon.vercel.app/",
-        github_link: "https://github.com/scisamir/meta-frontend-developer-capstone"
+        p_head: 'Statera Protocol',
+        image_src: 'projects/statera.png',
+        category: 'Zero-interest Cardano protocol',
+        description: 'Zero-interest collateral protocol on Cardano featuring collateral management, position NFTs, batching, and pool architecture.',
+        tools: ['Cardano', 'Aiken', 'Lucid', 'MeshJS', 'Protocol Design'],
+        site_link: 'https://statera-protocol-cardano.vercel.app/'
     },
     {
-        image_src: "projectd3.png",
-        p_head: "Fullstack DevOps",
-        description: "This is a Full Stack DevOps project that leveraged the power of CI/CD with CircleCI, configuration management with Ansible, Monitoring and Alerting with Prometheus and AlertManager all on the Cloud on AWS",
-        tools: ["AWS", "CI/CD", "CloudFormation", "AWS CLI", "Ansible", "Prometheus"],
-        site_link: "https://github.com/scisamir/udacity-cloud-devops-project3",
-        github_link: "https://github.com/scisamir/udacity-cloud-devops-project3"
+        p_head: 'Lava',
+        image_src: 'projects/lava.png',
+        category: 'Multi-platform staking protocol',
+        description: 'A multi-platform staking protocol designed to provide seamless staking experiences across blockchain ecosystems, with modular infrastructure for integrations.',
+        tools: ['Cardano', 'Aiken', 'MeshJS', 'TypeScript'],
+        site_link: 'https://lava-smart-contracts-bixd.vercel.app/'
     },
     {
-        image_src: "project1.png",
-        p_head: "Coverly",
-        description: "Coverly is a cover letter generator that generates a high quality, AI powered, automated coverly letter in seconds",
-        tools: ["HTML", "CSS", "React", "TailwindCSS"],
-        site_link: "https://coverly.app/",
-        github_link: "https://github.com/workshopapps/coverletter.web"
+        p_head: 'MinutesMarkets',
+        image_src: 'projects/minutemarkets.png',
+        category: 'Decentralized application tooling',
+        description: 'Platform infrastructure for decentralized product creation and participation.',
+        tools: ['Next.js', 'TypeScript', 'tRPC', 'Web3'],
+        site_link: 'https://www.minutemarkets.io/'
     },
     {
-        image_src: "projectd2.jpg",
-        p_head: "Operationalized Microservice",
-        description: "An operationalized microservice learning API using Docker and Kubernetes",
-        tools: ["CircleCI", "Docker", "Kubernetes"],
-        site_link: "https://hub.docker.com/repository/docker/scisamir/ml_microservice_api/general",
-        github_link: "https://github.com/scisamir/operationalized_microservice"
+        p_head: 'Metera Indexes',
+        image_src: 'projects/meteraindexes.png',
+        category: 'Ecosystem analytics',
+        description: 'Dashboard and tooling for index management and ecosystem analytics.',
+        tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI'],
+        site_link: 'https://app.meteraprotocol.io/'
     },
     {
-        image_src: "project2.jpg",
-        p_head: "AirBnB Clone",
-        description: "AirBnB Clone is a project aims to create a clone of the AirBnB website (...still in progress)",
-        tools: ["HTML", "CSS", "Python"],
-        site_link: "https://github.com/scisamir/AirBnB_clone",
-        github_link: "https://github.com/scisamir/AirBnB_clone"
+        p_head: 'Cardano Developer Course',
+        image_src: 'projects/cardanodevcourse.png',
+        category: 'Developer education',
+        description: 'Educational content designed to help developers learn Cardano smart contract development with Aiken.',
+        tools: ['Aiken', 'Cardano', 'Education', 'Smart Contracts'],
+        site_link: 'https://github.com/betterafricafdn/NextGen-Africa/blob/main/Cardano%20Development%20Course%20Module%201.pdf'
     },
     {
-        image_src: "project3.jpg",
-        p_head: "Metabnb",
-        description: "Metabnb provides you access to luxury and affordable houses in the metaverse, get a chance to turn your imagination to reality at your comfort zone",
-        tools: ["HTML", "CSS", "React", "BootStrap"],
-        site_link: "https://scisamir-metabnb.netlify.app/",
-        github_link: "https://github.com/scisamir/metabnb-hngi9-stage3"
-    },
-    {
-        image_src: "project6.jpg",
-        p_head: "Portfolio v0",
-        description: "My first portfolio website built in 2020. I used php in the hosting site to make messages sent to me through the \"Contact\" section go directly to my email",
-        tools: ["HTML", "CSS", "JavaScript"],
-        site_link: "https://idrissamir.netlify.app/",
-        github_link: "https://idrissamir.netlify.app/"
-    },
-    {
-        image_src: "projectd1.jpg",
-        p_head: "Static Website on AWS",
-        description: "This project used AWS to host a static website. It used AWS bucket, static web hosting, and AWS CloudFront",
-        tools: ["AWS", "Bucket", "CloudFront",],
-        site_link: "https://github.com/scisamir/deploy_static_website_on_aws",
-        github_link: "https://github.com/scisamir/deploy_static_website_on_aws"
-    },
-    {
-        image_src: "project4.jpg",
-        p_head: "Productivae",
-        description: "Productivae lets you manage your activities by allowing you to create, mark, and delete tasks",
-        tools: ["HTML", "CSS", "React", "LocalStorage"],
-        site_link: "https://h9sx89.csb.app/",
-        github_link: "https://github.com/scisamir/productivae"
-    },
-    {
-        image_src: "projectd0.jpg",
-        p_head: "Cloud Formation",
-        description: "This project deploys a web application with AWS CloudFormation",
-        tools: ["AWS", "CloudFormation", "Networking"],
-        site_link: "https://github.com/scisamir/deploy_web_app_with_cloudformation",
-        github_link: "https://github.com/scisamir/deploy_web_app_with_cloudformation"
-    },
+        p_head: 'TELA Maize Research Project',
+        image_src: 'projects/telamaize.jpg',
+        category: 'Biotechnology research',
+        description: "Participatory Rural Appraisal study on farmers' awareness and perceptions of GM TELA maize in Niger State, Nigeria.",
+        tools: ['Biotechnology', 'Agritech', 'Field Research', 'PRA'],
+        site_link: 'https://docs.google.com/document/d/1Bb3nGTt0BV3hc5Ile2JmZPzAfKtuZRIE/edit?usp=sharing&ouid=113358264175618603101&rtpof=true&sd=true'
+    }
 ];
 
 export default MyProjects;
-
-// Template
-// {
-//     image_src: "",
-//     p_head: "",
-//     description: "",
-//     tools: ["HTML", "CSS",],
-//     site_link: "",
-//     github_link: ""
-// },

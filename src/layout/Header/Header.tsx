@@ -42,7 +42,7 @@ export default function Header() {
 		const nav = document.querySelector("nav");
 		const handleNavColor = () => {
 			if (checkbox.checked) {
-				nav!.style.background = "#182828"
+				nav!.style.background = "rgba(14, 29, 35, 0.98)"
 			} else {
 				nav!.style.background = "none"
 			}
@@ -63,7 +63,7 @@ export default function Header() {
 			window.removeEventListener("scroll", handleScroll);
 			for (const page_link of page_links) {
 				page_link.removeEventListener("click", handleLinkClick);
-			};
+			}
 			checkbox.removeEventListener("change", handleNavColor);
 		};
 	}, []);
@@ -77,17 +77,17 @@ export default function Header() {
 					<AiOutlineClose className="hambClose hambChild" color="#3498db" fontSize="2.5rem" />
 				</label>
 				<label className='logo'>
-					<a className="rootLogo" href="\">
+					<a className="rootLogo" href="#homepage" aria-label="Go to homepage">
 						<img src={rootLogo} alt="go to the root or home" />
 					</a>
 				</label>
 				<ul>
-					<li><a href="#homepage" className='page_link active'>home</a></li>
-					<li><a href="#about" className='page_link'>about</a></li>
-					<li><a href="#experience" className='page_link'>experience</a></li>
-					<li><a href="#projects" className='page_link'>projects</a></li>
-					<li><a href="#contact" className='page_link'>contact</a></li>
-					<li><button><a className="resume" href="https://drive.google.com/file/d/11G1CC_lACHDYSAScYctRg0zv7wPOJmIx/view?usp=sharing" target="_blank">Resume</a></button></li>
+					<li><a href="#homepage" className='page_link active'>Home</a></li>
+					<li><a href="#about" className='page_link'>About</a></li>
+					<li><a href="#experience" className='page_link'>Experience</a></li>
+					<li><a href="#projects" className='page_link'>Projects</a></li>
+					<li><a href="#contact" className='page_link'>Contact</a></li>
+					<li><a className="resume" href="https://docs.google.com/document/d/1LSL2-zN2iZRyqhNjx0cb4dDnzThc1QiM/edit?usp=sharing&ouid=113358264175618603101&rtpof=true&sd=true" target="_blank" rel="noreferrer">CV</a></li>
 				</ul>
 			</nav>
 		</header>

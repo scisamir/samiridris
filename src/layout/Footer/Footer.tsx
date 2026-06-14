@@ -3,7 +3,8 @@ import './styles.css'
 const Footer = () => {
     return (
         <section id="copyright">
-            Made with <span>&#10084;</span> by Samir Idris
+            <span>Samir Idris</span>
+            <p>Software Engineer | Blockchain Developer | Web3 Builder</p>
         </section>
     );
 }

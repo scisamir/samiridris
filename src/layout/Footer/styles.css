@@ -1,13 +1,20 @@
-/* Copyright */
 section#copyright {
-    background: #182828;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    font-size: 16px;
-    color: #FFFFFF;
-    border-top: 2px solid #0D1313;
+    background: #081216;
+    border-top: 1px solid rgba(248, 244, 234, 0.08);
+    color: #f8f4ea;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    justify-content: center;
+    padding: 22px;
+    text-align: center;
 }
 
 section#copyright span {
-    color: #FF0000;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+section#copyright p {
+    color: #b7cbc6;
 }

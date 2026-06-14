@@ -1,119 +1,123 @@
 .projectCard {
-    background: #FFFFFF;
-    width: 80%;
-    height: 280px;
+    background: #ffffff;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    border: 2px solid #EEEEEE;
-    border-radius: 16px;
+    flex-direction: column;
+    overflow: hidden;
     text-align: left;
-    margin-bottom: 50px;
+}
+
+.projectImage,
+.projectVisual {
+    aspect-ratio: 2 / 1;
+    width: 100%;
 }
 
 .projectImage {
     display: block;
-    height: 100%;
-    width: 40%;
+    height: auto;
     object-fit: cover;
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
+}
+
+.projectVisual {
+    align-items: center;
+    background: var(--color-deep-2);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.projectVisual::after {
+    background: var(--color-coral);
+    bottom: 0;
+    content: "";
+    height: 8px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.projectVisual span {
+    color: #f8f4ea;
+    font-size: 2.3rem;
+    font-weight: 900;
 }
 
 .projectDescription {
-    padding: 10px;
+    align-items: flex-start;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    width: 60%;
+    justify-content: flex-start;
+    padding: 26px;
 }
 
-.projectDescription h2,
-.projectDescription .tools,
-.projectDescription .description {
-    margin-bottom: 16px;
+.projectCategory {
+    color: var(--color-coral);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.projectDescription h2 {
+    color: var(--color-ink);
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
 }
 
 .projectDescription .description {
-    margin-top: -5px;
-    font-size: 14px;
-    color: #343434;
+    color: var(--color-ink-soft);
+    font-size: 0.96rem;
+    margin-bottom: 18px;
 }
 
 .projectDescription .tools {
     display: flex;
-    gap: 10px;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 .projectDescription .tools span {
-    background: #EDF2F7;
-    padding: 4px 10px;
-    border-radius: 2px;
-    color: #1A202C;
-    font-size: 14px;
+    background: #f0eadf;
+    border-radius: 999px;
+    color: #3d3428;
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 6px 10px;
 }
 
 .projectButtons {
     display: flex;
-    gap: 15px;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 22px;
 }
 
-.projectCard .projectButtons button {
-    padding: 10px 12px;
-    font-size: 14px;
-    word-spacing: -2px;
-    border-radius: 6px;
-    border: none;
-    font-weight: 600;
-    background: #3498db;
-    color: #FFFFFF;
-    display: flex;
-    gap: 8px;
+.projectButton {
     align-items: center;
-    cursor: pointer;
+    background: var(--color-blue);
+    border-radius: 8px;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 0.88rem;
+    font-weight: 800;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 12px;
 }
 
-.projectCard .projectButtons .githubBt {
-    background: #EDF2F7;
-    color: #1A202C;
+.projectButton.githubBt {
+    background: #edf2f7;
+    color: #1a202c;
 }
 
-
-/* RESPONSIVENESS */
-@media screen and (max-width: 1024px) {
-    .projectCard {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .projectCard {
-        flex-direction: column;
-        height: auto;
-        width: 92%;
-    }
-    .projectImage {
-        width: 100%;
-        border-bottom-left-radius: 0px;
-        border-top-right-radius: 16px;
-    }
+@media screen and (max-width: 640px) {
     .projectDescription {
-        width: 100%;
-        padding: 15px;
-        padding-top: 0;
-    }
-    .projectDescription h2 {
-        font-size: 20px;
-    }
-    .projectDescription h2,
-    .projectDescription .tools,
-    .projectDescription .description {
-        margin-bottom: 12px;
-    }
-    .projectButtons {
-        margin-bottom: 30px;
+        padding: 22px;
     }
 }
