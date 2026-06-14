@@ -1,9 +1,25 @@
+import { useMemo, useState } from 'react';
 import Project from './Project/Project';
 import MyProjects from '../../static/projects';
+import { ProjectGroup } from './Project/Project.type';
 
 import './styles.css'
 
+type ProjectFilter = 'All' | ProjectGroup;
+
+const projectFilters: ProjectFilter[] = ['All', 'Blockchain', 'DevOps', 'Biotech', 'Frontend'];
+
 const Projects = () => {
+    const [activeFilter, setActiveFilter] = useState<ProjectFilter>('All');
+
+    const filteredProjects = useMemo(() => {
+        if (activeFilter === 'All') {
+            return MyProjects;
+        }
+
+        return MyProjects.filter((project) => project.project_type === activeFilter);
+    }, [activeFilter]);
+
     const contributions = [
         {
             name: 'Minswap DEX',
@@ -23,11 +39,24 @@ const Projects = () => {
         <section id="projects" className="sectionPad lightSection">
             <div className="sectionHeading">
                 <p className="eyebrow">Selected projects & major contributions</p>
-                <h2>Work spanning protocol infrastructure, DEX modernization, indexes, education, and biotech research.</h2>
+                <h2>Work spanning Web3 protocols, DEX modernization, frontend products, DevOps systems, education, and biotech research.</h2>
+            </div>
+            <div className="projectFilters" aria-label="Filter projects by category">
+                {projectFilters.map((filter) => (
+                    <button
+                        key={filter}
+                        type="button"
+                        className={activeFilter === filter ? 'activeFilter' : ''}
+                        aria-pressed={activeFilter === filter}
+                        onClick={() => setActiveFilter(filter)}
+                    >
+                        {filter.toUpperCase()}
+                    </button>
+                ))}
             </div>
             <div className="projectsGrid">
-                {MyProjects &&
-                    MyProjects.map((myproject) => {
+                {filteredProjects &&
+                    filteredProjects.map((myproject) => {
                         return (
                             <Project
                                 key={myproject.p_head}

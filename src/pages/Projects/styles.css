@@ -2,6 +2,37 @@ section#projects {
     border-bottom: 1px solid var(--color-line);
 }
 
+.projectFilters {
+    background: #ffffff;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: -18px auto 32px;
+    max-width: var(--max-width);
+    padding: 6px;
+    width: fit-content;
+}
+
+.projectFilters button {
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: var(--color-ink-soft);
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    min-height: 38px;
+    padding: 0 14px;
+}
+
+.projectFilters button.activeFilter {
+    background: var(--color-deep);
+    color: #f8f4ea;
+}
+
 .projectsGrid {
     display: grid;
     gap: 22px;
@@ -61,6 +92,16 @@ section#projects {
 }
 
 @media screen and (max-width: 480px) {
+    .projectFilters {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .projectFilters button {
+        flex: 1 1 45%;
+        padding: 0 10px;
+    }
+
     .contributions {
         padding: 24px;
     }

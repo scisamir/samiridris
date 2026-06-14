@@ -1,6 +1,9 @@
+export type ProjectGroup = 'Blockchain' | 'DevOps' | 'Biotech' | 'Frontend';
+
 export interface ProjectProps {
     image_src?: string,
     p_head: string,
+    project_type?: ProjectGroup,
     category?: string,
     description: string,
     tools: string[]
