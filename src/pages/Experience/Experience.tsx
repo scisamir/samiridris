@@ -54,8 +54,12 @@ const skillGroups = [
         skills: ['Node.js', 'tRPC']
     },
     {
+        title: 'DevOps & Cloud',
+        skills: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'CircleCI', 'CloudFormation', 'Ansible', 'Prometheus']
+    },
+    {
         title: 'Tools',
-        skills: ['Git', 'GitHub', 'CI/CD']
+        skills: ['Git', 'GitHub', 'Bash', 'Linux']
     }
 ];
 
