@@ -7,7 +7,7 @@ const roles = [
         period: '2024-Present',
         points: [
             'Co-found and help shape product and engineering direction.',
-            'Develop Cardano smart contracts using Aiken and Lucid.',
+            'Develop Cardano smart contracts using Aiken, Lucid and MeshJS.',
             'Build decentralized applications and protocol infrastructure.',
             'Participate in architecture discussions and code reviews.'
         ]
@@ -43,7 +43,7 @@ const roles = [
 const skillGroups = [
     {
         title: 'Blockchain',
-        skills: ['Cardano', 'Aiken', 'Lucid', 'Solidity', 'Foundry', 'Base', 'wagmi', 'viem']
+        skills: ['Cardano', 'Aiken', 'Lucid', 'MeshJS', 'Solidity', 'Foundry', 'Base', 'wagmi', 'viem']
     },
     {
         title: 'Frontend',

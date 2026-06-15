@@ -139,6 +139,11 @@ section#contact form button {
     width: max-content;
 }
 
+section#contact form button:disabled {
+    cursor: wait;
+    opacity: 0.68;
+}
+
 @media screen and (max-width: 860px) {
     .contactLayout {
         grid-template-columns: 1fr;

@@ -9,6 +9,11 @@ import { FaXTwitter } from 'react-icons/fa6';
 import 'react-toastify/dist/ReactToastify.css';
 import './styles.css'
 
+const contactEmail = 'samzidris11@gmail.com';
+
+const emailjsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'portfolio_contact';
+const emailjsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_3p5l5wk';
+const emailjsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || import.meta.env.VITE_PUBLIC_KEY;
 
 const Contact = () => {
     const [ formState, setFormState ] = useState({
@@ -17,6 +22,7 @@ const Contact = () => {
         title: "",
         message: ""
     });
+    const [isSending, setIsSending] = useState(false);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormState((prevState) => ({
@@ -25,30 +31,58 @@ const Contact = () => {
         }))
     }
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const buildMailtoLink = () => {
+        const subject = encodeURIComponent(formState.title || `Portfolio message from ${formState.name}`);
+        const body = encodeURIComponent(
+            `Name: ${formState.name}\nEmail: ${formState.email}\n\n${formState.message}`
+        );
+
+        return `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+    }
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        // Send Email
-        emailjs.send(
-            "portfolio_contact",
-            "template_3p5l5wk",
-            formState,
-            import.meta.env.VITE_PUBLIC_KEY
-        )
-        .then((res) => {
+        const templateParams = {
+            ...formState,
+            from_name: formState.name,
+            from_email: formState.email,
+            reply_to: formState.email,
+            subject: formState.title || `Portfolio message from ${formState.name}`,
+        };
+
+        setIsSending(true);
+
+        if (!emailjsPublicKey) {
+            toast.info("Opening your email app to complete the message.");
+            window.location.href = buildMailtoLink();
+            setIsSending(false);
+            return;
+        }
+
+        try {
+            const res = await emailjs.send(
+                emailjsServiceId,
+                emailjsTemplateId,
+                templateParams,
+                emailjsPublicKey
+            );
+
             toast.success("Thanks! Your message has been successfully sent.");
             console.log("SUCCESS", res.status, res.text);
-        }, (err) => {
-            toast.error("Oops! Your message was unable to be sent. Please try again.");
+            setFormState({
+                name: "",
+                email: "",
+                title: "",
+                message: ""
+            });
+        } catch (err) {
+            toast.error("Direct send failed. Opening your email app instead.");
             console.log("FAILED...", err);
-        });
-
-        setFormState({
-            name: "",
-            email: "",
-            title: "",
-            message: ""
-        });
+            window.location.href = buildMailtoLink();
+        } finally {
+            setIsSending(false);
+        }
     }
 
     return (
@@ -97,7 +131,7 @@ const Contact = () => {
                             <li><a href="https://github.com/scisamir" target="_blank" rel="noreferrer" aria-label="GitHub">
                                 <AiFillGithub color="#FFFFFF" fontSize="3rem" />
                             </a></li>
-                            <li><a href="mailto:samzidris11@gmail.com" aria-label="Email">
+                            <li><a href={`mailto:${contactEmail}`} aria-label="Email">
                                 <BiLogoGmail color="#FFFFFF" fontSize="3rem" />
                             </a></li>
                             <li><a href="https://twitter.com/ScientistSamir" target="_blank" rel="noreferrer" aria-label="X Twitter">
@@ -112,8 +146,8 @@ const Contact = () => {
                         <input required type="text" name="name" id="contact-name" placeholder="Your name" value={formState.name} onChange={handleInputChange} />
                         <input required type="email" name="email" id="email" placeholder="Your email" value={formState.email} onChange={handleInputChange} />
                         <input type="text" name="title" id="title" placeholder="Subject" value={formState.title} onChange={handleInputChange} />
-                        <textarea name="message" id="message" placeholder="Tell me what you are building..." value={formState.message} onChange={handleInputChange}></textarea>
-                        <button type="submit">Send Message</button>
+                        <textarea required name="message" id="message" placeholder="Tell me what you are building..." value={formState.message} onChange={handleInputChange}></textarea>
+                        <button type="submit" disabled={isSending}>{isSending ? 'Sending...' : 'Send Message'}</button>
                     </form>
                 </div>
             </div>
