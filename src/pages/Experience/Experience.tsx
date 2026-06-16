@@ -6,10 +6,12 @@ const roles = [
         title: 'Co-founder & Blockchain Developer',
         period: '2024-Present',
         points: [
-            'Co-found and help shape product and engineering direction.',
-            'Develop Cardano smart contracts using Aiken, Lucid and MeshJS.',
-            'Build decentralized applications and protocol infrastructure.',
-            'Participate in architecture discussions and code reviews.'
+            'Co-founded and helped shape product and engineering direction.',
+            'Developed Cardano smart contracts using Aiken, Lucid and MeshJS.',
+            'Built decentralized applications and protocol infrastructure.',
+            'Contributed to HydraStake, a privacy-preserving liquid staking protocol on Midnight and 1st-place DeFi Track winner at the Midnight London Summit Hackathon 2025.',
+            'Contributed to FundAGoal, a 1st-place Midnight Track winner at the African Blockchain Championship Hackathon.',
+            'Contributed to architecture discussions and code reviews.'
         ]
     },
     {
@@ -17,9 +19,9 @@ const roles = [
         title: 'Blockchain Developer',
         period: '2025-Present',
         points: [
-            'Develop frontend features and integrations.',
-            'Work with Next.js, TypeScript, tRPC, Tailwind CSS, and Shadcn UI.',
-            'Build and maintain ecosystem tools and dashboards.'
+            'Developed frontend features and integrations.',
+            'Worked with Next.js, TypeScript, tRPC, Tailwind CSS, and Shadcn UI.',
+            'Built and maintained ecosystem tools and dashboards.'
         ]
     },
     {
@@ -27,7 +29,7 @@ const roles = [
         title: 'Product Committee Member',
         period: '2026-Present',
         points: [
-            'Contribute to product and community initiatives within the Cardano ecosystem.'
+            'Contributed to product and community initiatives within the Cardano ecosystem.'
         ]
     },
     {
@@ -43,7 +45,7 @@ const roles = [
 const skillGroups = [
     {
         title: 'Blockchain',
-        skills: ['Cardano', 'Aiken', 'Lucid', 'MeshJS', 'Solidity', 'Foundry', 'Base', 'wagmi', 'viem']
+        skills: ['Cardano', 'Midnight', 'Privacy', 'Aiken', 'Lucid', 'MeshJS', 'Solidity', 'Foundry', 'Base', 'wagmi', 'viem']
     },
     {
         title: 'Frontend',

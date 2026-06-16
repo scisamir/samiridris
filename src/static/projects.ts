@@ -20,6 +20,15 @@ const MyProjects: ProjectProps[] = [
         site_link: 'https://statera-protocol-cardano.vercel.app/'
     },
     {
+        p_head: 'Metera Indexes',
+        project_type: 'Blockchain',
+        image_src: 'projects/meteraindexes.png',
+        category: 'Ecosystem analytics',
+        description: 'Dashboard and tooling for index management and ecosystem analytics.',
+        tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI'],
+        site_link: 'https://app.meteraprotocol.io/'
+    },
+    {
         p_head: 'Lava',
         project_type: 'Blockchain',
         image_src: 'projects/lava.png',
@@ -29,22 +38,32 @@ const MyProjects: ProjectProps[] = [
         site_link: 'https://lava-smart-contracts-bixd.vercel.app/'
     },
     {
+        p_head: 'HydraStake',
+        project_type: 'Blockchain',
+        image_src: 'projects/hydrastake.png',
+        category: 'Privacy-preserving liquid staking',
+        description: 'Contributed to HydraStake, a privacy-preserving liquid staking protocol on Midnight and 1st-place DeFi Track winner at the Midnight London Summit Hackathon 2025.',
+        tools: ['Midnight', 'Compact', 'ZK', 'Liquid Staking', 'DeFi'],
+        github_link: 'https://github.com/TechMartins72/hydra-stake-protocol'
+    },
+    {
+        p_head: 'FundAGoal',
+        project_type: 'Blockchain',
+        image_src: 'projects/fundagoal.png',
+        category: 'Midnight hackathon winner',
+        description: 'Contributed to FundAGoal, a 1st-place Midnight Track winner at the African Blockchain Championship Hackathon.',
+        tools: ['Midnight', 'Privacy', 'Web3', 'Crowdfunding', 'Hackathon'],
+        site_link: 'http://fundagoal.s3-website.eu.north-1.amazonaws.com/',
+        github_link: 'https://github.com/codeBigInt/fundagoal'
+    },
+    {
         p_head: 'MinutesMarkets',
         project_type: 'Blockchain',
         image_src: 'projects/minutemarkets.png',
         category: 'Decentralized application tooling',
         description: 'Platform infrastructure for decentralized product creation and participation.',
-        tools: ['Next.js', 'TypeScript', 'tRPC', 'Web3'],
+        tools: ['Next.js', 'TypeScript', 'Node.js', 'tRPC', 'Web3'],
         site_link: 'https://www.minutemarkets.io/'
-    },
-    {
-        p_head: 'Metera Indexes',
-        project_type: 'Blockchain',
-        image_src: 'projects/meteraindexes.png',
-        category: 'Ecosystem analytics',
-        description: 'Dashboard and tooling for index management and ecosystem analytics.',
-        tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI'],
-        site_link: 'https://app.meteraprotocol.io/'
     },
     {
         p_head: 'Coverly',

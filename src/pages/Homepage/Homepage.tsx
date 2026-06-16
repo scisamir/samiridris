@@ -7,15 +7,15 @@ export default function HomePage() {
 		<section id="homepage">
 			<div className="heroInner">
 				<div className="heroCopy">
-					<p className="eyebrow">Cardano, EVM, AI and biotechnology</p>
+					<p className="eyebrow">Cardano, Midnight, EVM, AI and biotechnology</p>
 					<h1>Samir Idris</h1>
 					<p className="heroHeadline">
 						Software Engineer | Blockchain Developer | Web3 Builder | AI & Biotechnology Enthusiast
 					</p>
 					<p className="heroSummary">
 						As a Lucent Labs co-founder, I build decentralized applications, smart contract infrastructure,
-						and ecosystem tools across Cardano and EVM, with a research background that keeps me curious
-						about biotech, agritech, and applied AI.
+						and privacy-aware ecosystem tools across Cardano, Midnight and EVM, with a research background
+						that keeps me curious about biotech, agritech, and applied AI.
 					</p>
 					<div className="heroActions">
 						<a className="primaryAction" href="#projects">View selected work</a>
@@ -28,7 +28,7 @@ export default function HomePage() {
 						</div>
 						<div>
 							<strong>Cardano + EVM</strong>
-							<span>Smart contracts and dApps</span>
+							<span>DApps, smart contracts and privacy</span>
 						</div>
 						<div>
 							<strong>Protocol Work</strong>
