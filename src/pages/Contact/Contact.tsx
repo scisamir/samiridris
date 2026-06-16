@@ -45,8 +45,12 @@ const Contact = () => {
 
         const templateParams = {
             ...formState,
+            to_name: 'Samir Idris',
+            to_email: contactEmail,
             from_name: formState.name,
             from_email: formState.email,
+            user_name: formState.name,
+            user_email: formState.email,
             reply_to: formState.email,
             subject: formState.title || `Portfolio message from ${formState.name}`,
         };
