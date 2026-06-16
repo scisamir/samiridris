@@ -7,7 +7,13 @@ import './styles.css'
 
 type ProjectFilter = 'All' | ProjectGroup;
 
-const projectFilters: ProjectFilter[] = ['All', 'Blockchain', 'DevOps', 'Biotech', 'Frontend'];
+const projectFilters: { label: string; value: ProjectFilter }[] = [
+    { label: 'ALL', value: 'All' },
+    { label: 'BLOCKCHAIN', value: 'Blockchain' },
+    { label: 'DEVOPS', value: 'DevOps' },
+    { label: 'BIOTECH', value: 'Biotech' },
+    { label: 'MISC', value: 'Misc' }
+];
 
 const Projects = () => {
     const [activeFilter, setActiveFilter] = useState<ProjectFilter>('All');
@@ -44,13 +50,13 @@ const Projects = () => {
             <div className="projectFilters" aria-label="Filter projects by category">
                 {projectFilters.map((filter) => (
                     <button
-                        key={filter}
+                        key={filter.value}
                         type="button"
-                        className={activeFilter === filter ? 'activeFilter' : ''}
-                        aria-pressed={activeFilter === filter}
-                        onClick={() => setActiveFilter(filter)}
+                        className={activeFilter === filter.value ? 'activeFilter' : ''}
+                        aria-pressed={activeFilter === filter.value}
+                        onClick={() => setActiveFilter(filter.value)}
                     >
-                        {filter.toUpperCase()}
+                        {filter.label}
                     </button>
                 ))}
             </div>

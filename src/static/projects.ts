@@ -67,7 +67,7 @@ const MyProjects: ProjectProps[] = [
     },
     {
         p_head: 'Coverly',
-        project_type: 'Frontend',
+        project_type: 'Misc',
         image_src: 'project1.png',
         category: 'Frontend product',
         description: 'AI-powered cover letter generator built as a polished web product for creating high-quality application letters quickly.',
@@ -77,7 +77,7 @@ const MyProjects: ProjectProps[] = [
     },
     {
         p_head: 'Little Lemon Restaurant',
-        project_type: 'Frontend',
+        project_type: 'Misc',
         image_src: 'project0.jpg',
         category: 'Frontend application',
         description: 'Restaurant website and booking experience for a Mediterranean dining brand, built with reusable React components and responsive UI patterns.',

@@ -1,4 +1,4 @@
-export type ProjectGroup = 'Blockchain' | 'DevOps' | 'Biotech' | 'Frontend';
+export type ProjectGroup = 'Blockchain' | 'DevOps' | 'Biotech' | 'Misc';
 
 export interface ProjectProps {
     image_src?: string,
