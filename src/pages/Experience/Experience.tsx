@@ -9,9 +9,9 @@ const roles = [
             'Co-founded and helped shape product and engineering direction.',
             'Developed Cardano smart contracts using Aiken, Lucid and MeshJS.',
             'Built decentralized applications and protocol infrastructure.',
+            'Contributed to architecture discussions and code reviews.',
             'Contributed to HydraStake, a privacy-preserving liquid staking protocol on Midnight and 1st-place DeFi Track winner at the Midnight London Summit Hackathon 2025.',
-            'Contributed to FundAGoal, a 1st-place Midnight Track winner at the African Blockchain Championship Hackathon.',
-            'Contributed to architecture discussions and code reviews.'
+            'Contributed to FundAGoal, a 1st-place Midnight Track winner at the African Blockchain Championship Hackathon.'
         ]
     },
     {
@@ -45,7 +45,7 @@ const roles = [
 const skillGroups = [
     {
         title: 'Blockchain',
-        skills: ['Cardano', 'Midnight', 'Privacy', 'Aiken', 'Lucid', 'MeshJS', 'Solidity', 'Foundry', 'Base', 'wagmi', 'viem']
+        skills: ['Cardano', 'Midnight', 'Privacy', 'Aiken', 'MeshJS', 'Lucid', 'Solidity', 'Foundry', 'Base', 'wagmi', 'viem']
     },
     {
         title: 'Frontend',
