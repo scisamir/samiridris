@@ -57,15 +57,6 @@ const MyProjects: ProjectProps[] = [
         github_link: 'https://github.com/codeBigInt/fundagoal'
     },
     {
-        p_head: 'MinutesMarkets',
-        project_type: 'Blockchain',
-        image_src: 'projects/minutemarkets.png',
-        category: 'Decentralized application tooling',
-        description: 'Platform infrastructure for decentralized product creation and participation.',
-        tools: ['Next.js', 'TypeScript', 'Node.js', 'tRPC', 'Web3'],
-        site_link: 'https://www.minutemarkets.io/'
-    },
-    {
         p_head: 'Coverly',
         project_type: 'Misc',
         image_src: 'project1.png',
