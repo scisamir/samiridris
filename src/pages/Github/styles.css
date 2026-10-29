@@ -1,0 +1,175 @@
+.github-section {
+  background: #11131c;
+  position: relative;
+}
+.github-section::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 1px;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, #7970d5, transparent);
+}
+.github-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: center;
+}
+.github-copy h2 {
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.github-copy > p:not(.section-label) {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 400px;
+  margin-top: 24px;
+}
+.github-profile {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 13px;
+  gap: 12px;
+  margin-top: 20px;
+}
+.github-repositories > .eyebrow {
+  margin-bottom: 22px;
+  font-size: 9px;
+}
+.repository-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-block: 24px;
+  border-top: 1px solid var(--line);
+  transition: color 0.2s;
+}
+.repository-link > svg:first-child {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.repository-link > svg:last-child {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--subtle);
+  transition:
+    transform 0.2s,
+    color 0.2s;
+}
+.repository-link > span {
+  min-width: 0;
+}
+.repository-name {
+  display: block;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.repository-stack {
+  display: block;
+  color: var(--subtle);
+  font: 400 9px/1.7 var(--mono);
+  margin-top: 6px;
+}
+.repository-link:hover {
+  color: var(--accent);
+}
+.repository-link:hover > svg:last-child {
+  transform: translate(2px, -2px);
+  color: var(--accent);
+}
+.github-recognition {
+  margin-top: 52px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.github-recognition h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 400 11px var(--mono);
+  color: #c9c6e4;
+  text-transform: uppercase;
+}
+.github-recognition h3 > svg {
+  color: var(--accent);
+  font-size: 17px;
+}
+.recognition-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  margin-top: 26px;
+}
+.recognition-list > a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+  padding-block: 12px;
+}
+.recognition-place {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  flex-shrink: 0;
+  color: #b7afff;
+  font: 400 36px/1.2 var(--mono);
+}
+.recognition-place > span {
+  font-size: 10px;
+}
+.recognition-details {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.recognition-details > strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+.recognition-details > span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.recognition-list > a > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--subtle);
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+.recognition-list > a:hover > svg {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+@media (max-width: 900px) {
+  .github-layout {
+    gap: 48px;
+  }
+  .github-copy h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 650px) {
+  .recognition-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .recognition-list > a {
+    gap: 16px;
+  }
+  .recognition-place {
+    font-size: 30px;
+  }
+  .github-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .github-copy h2 {
+    font-size: 32px;
+  }
+}

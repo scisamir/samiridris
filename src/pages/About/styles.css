@@ -1,97 +1,118 @@
-section#about {
-    border-bottom: 1px solid var(--color-line);
+.about-section .section-heading h2 {
+  max-width: 700px;
 }
-
-.aboutGrid {
-    display: grid;
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 216px;
+  gap: 100px;
+  align-items: start;
+}
+.about-copy {
+  max-width: 760px;
+}
+.about-copy p {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.about-copy .about-lead {
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.about-copy .text-link {
+  color: var(--accent);
+  margin-top: 2px;
+}
+.about-portrait {
+  position: relative;
+  padding-top: 6px;
+}
+.about-portrait::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: -10px;
+  bottom: 35px;
+  left: 10px;
+  border: 1px solid #6662ad5c;
+  z-index: -1;
+}
+.about-portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.65);
+  border: 1px solid var(--line);
+}
+.about-portrait figcaption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font: 400 9px var(--mono);
+  color: var(--muted);
+}
+.portrait-marker {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+.about-footnotes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+  margin-top: 48px;
+}
+.about-footnotes dt {
+  color: var(--subtle);
+  font: 400 10px var(--mono);
+  margin-bottom: 10px;
+}
+.about-footnotes dd {
+  font-size: 14px;
+  color: #ced1dd;
+}
+@media (max-width: 900px) {
+  .about-layout {
     gap: 48px;
-    grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
-    margin: 0 auto;
-    max-width: var(--max-width);
-    text-align: left;
+    grid-template-columns: minmax(0, 1fr) 170px;
+  }
 }
-
-.aboutStory {
-    background: var(--color-deep);
-    border-radius: 8px;
-    box-shadow: var(--shadow-soft);
-    color: #f8f4ea;
-    padding: 34px;
-}
-
-.aboutStory p {
-    color: #dbe8e4;
-    font-size: 1.02rem;
-    margin-bottom: 18px;
-}
-
-.aboutStory p:first-child {
-    color: #ffffff;
-    font-size: 1.18rem;
-    font-weight: 700;
-}
-
-.interestList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 28px;
-}
-
-.interestList span {
-    background: rgba(73, 185, 157, 0.15);
-    border: 1px solid rgba(73, 185, 157, 0.36);
-    border-radius: 999px;
-    color: #d8fff4;
-    font-size: 0.86rem;
-    font-weight: 800;
-    padding: 7px 12px;
-}
-
-.aboutHighlights {
+@media (max-width: 600px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-copy p {
+    font-size: 15px;
+  }
+  .about-copy .about-lead {
+    font-size: 20px;
+  }
+  .about-portrait {
+    max-width: 156px;
+  }
+  .about-footnotes {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 32px;
+  }
+  .about-footnotes > div {
     display: grid;
-    gap: 18px;
-}
-
-.aboutHighlights article {
-    background: #ffffff;
-    border: 1px solid var(--color-line);
-    border-left: 5px solid var(--color-gold);
-    border-radius: 8px;
-    padding: 24px 26px;
-}
-
-.aboutHighlights article:nth-child(2) {
-    border-left-color: var(--color-mint);
-}
-
-.aboutHighlights article:nth-child(3) {
-    border-left-color: var(--color-coral);
-}
-
-.aboutHighlights h3 {
-    color: var(--color-ink);
-    font-size: 1.12rem;
-    margin-bottom: 8px;
-}
-
-.aboutHighlights p {
-    color: var(--color-ink-soft);
-}
-
-@media screen and (max-width: 860px) {
-    .aboutGrid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .aboutStory,
-    .aboutHighlights article {
-        padding: 22px;
-    }
-
-    .aboutStory p:first-child {
-        font-size: 1.05rem;
-    }
+    grid-template-columns: 94px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 12px;
+  }
+  .about-footnotes dt {
+    margin-bottom: 0;
+  }
+  .about-footnotes dd {
+    font-size: 13px;
+  }
 }

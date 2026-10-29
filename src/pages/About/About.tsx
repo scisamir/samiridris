@@ -1,57 +1,80 @@
-import './styles.css'
+import { FiArrowUpRight } from 'react-icons/fi';
+import Reveal from '../../components/Reveal';
+import SectionHeading from '../../components/SectionHeading';
+import { profile } from '../../static/profile';
+import './styles.css';
 
-const About = () => {
-    const strengths = [
-        {
-            title: 'Research-trained builder',
-            text: 'First Class Botany graduate from Ahmadu Bello University, Zaria, and best graduating student in the department.'
-        },
-        {
-            title: 'Founder and Web3 product engineer',
-            text: 'Co-founder at Lucent Labs with hands-on experience shipping dApps, dashboards, protocol tooling, and smart contract integrations.'
-        },
-        {
-            title: 'Cross-domain curiosity',
-            text: 'Focused on the overlap between decentralized systems, AI, biotechnology, agritech, and entrepreneurship.'
-        }
-    ];
-
-    const interests = ['Web3', 'AI', 'Biotechnology', 'Agritech', 'Entrepreneurship'];
-
-    return (
-            <section id="about" className="sectionPad lightSection">
-                <div className="sectionHeading">
-                    <p className="eyebrow">About me</p>
-                    <h2>Engineering decentralized products with a scientist's curiosity.</h2>
-                </div>
-                <div className="aboutGrid">
-                    <div className="aboutStory">
-                        <p>
-                            I am a Software Engineer and Blockchain Developer passionate about building technologies
-                            at the intersection of Web3, AI, biotechnology, and entrepreneurship.
-                        </p>
-                        <p>
-                            I graduated from Ahmadu Bello University, Zaria with First Class Honours in Botany. Alongside
-                            that academic foundation, I transitioned into software engineering and blockchain development,
-                            where I have built and contributed to applications across the Cardano and EVM ecosystems.
-                        </p>
-                        <div className="interestList" aria-label="Interests">
-                            {interests.map((interest) => (
-                                <span key={interest}>{interest}</span>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="aboutHighlights" aria-label="Profile strengths">
-                        {strengths.map((strength) => (
-                            <article key={strength.title}>
-                                <h3>{strength.title}</h3>
-                                <p>{strength.text}</p>
-                            </article>
-                        ))}
-                    </div>
-                </div>
-            </section>
-    );
+export default function About() {
+  return (
+    <section id="about" className="section about-section">
+      <div className="container">
+        <Reveal>
+          <SectionHeading
+            number="01"
+            label="About"
+            title="An engineer's mind. A scientist's curiosity."
+          />
+          <div className="about-layout">
+            <div className="about-copy">
+              <p className="about-lead">
+                I build software with a systems mindset and a researcher's
+                curiosity.
+              </p>
+              <p>
+                I'm Samir Idris (@scisamir), a software engineer, blockchain
+                engineer and co-founder of Lucent Labs. My work spans smart
+                contracts, distributed applications, frontend engineering and
+                the infrastructure that brings them together, including Cardano
+                development with Aiken and Plutus.
+              </p>
+              <p>
+                My foundation is in the life sciences. I graduated with First
+                Class Honours in Botany from Ahmadu Bello University, Zaria, as
+                the department's best graduating student. Today, I'm exploring
+                how software, AI and computational biology can inform one
+                another.
+              </p>
+              <a
+                className="text-link"
+                href={profile.cv}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View my curriculum vitae <FiArrowUpRight aria-hidden="true" />
+              </a>
+            </div>
+            <figure className="about-portrait">
+              <img
+                src="/samir-idris-portrait.webp"
+                srcSet="/samir-idris-portrait-small.webp 320w, /samir-idris-portrait.webp 480w"
+                sizes="(max-width: 600px) 156px, (max-width: 900px) 170px, 216px"
+                alt="Portrait of Samir Idris"
+                width="240"
+                height="300"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <span className="portrait-marker" /> BASED IN ABUJA
+              </figcaption>
+            </figure>
+          </div>
+          <dl className="about-footnotes">
+            <div>
+              <dt>BUILDING</dt>
+              <dd>Software & distributed systems</dd>
+            </div>
+            <div>
+              <dt>EXPLORING</dt>
+              <dd>AI & computational biology</dd>
+            </div>
+            <div>
+              <dt>FOUNDATION</dt>
+              <dd>First Class B.Sc. Botany</dd>
+            </div>
+          </dl>
+        </Reveal>
+      </div>
+    </section>
+  );
 }
-
-export default About;

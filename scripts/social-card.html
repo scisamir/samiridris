@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Samir Idris social card source</title>
+    <style>
+      @font-face {
+        font-family: Space;
+        src: url('/fonts/space-grotesk-latin.woff2');
+      }
+      @font-face {
+        font-family: Mono;
+        src: url('/fonts/ibm-plex-mono-latin.woff2');
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        letter-spacing: 0;
+      }
+      body {
+        width: 1200px;
+        height: 630px;
+        background: #0d1117;
+        color: #f0f1f6;
+        font-family: Space, system-ui, sans-serif;
+        overflow: hidden;
+        position: relative;
+      }
+      .slice {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 360px;
+        background: linear-gradient(105deg, #080d1c 5%, #141b39 46%, #312e81);
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+      }
+      main {
+        position: relative;
+        padding: 68px 80px;
+      }
+      .label {
+        font:
+          16px Mono,
+          monospace;
+        color: #b4b1de;
+        display: flex;
+        gap: 14px;
+        align-items: center;
+      }
+      .label:before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        background: #a5a3ff;
+      }
+      h1 {
+        font-size: 104px;
+        font-weight: 600;
+        line-height: 1.1;
+        margin-top: 48px;
+      }
+      .handle {
+        font:
+          22px Mono,
+          monospace;
+        color: #b7b2fa;
+        margin-top: 18px;
+      }
+      .roles {
+        font-size: 29px;
+        margin-top: 62px;
+        color: #eeedf8;
+      }
+      .summary {
+        font:
+          16px Mono,
+          monospace;
+        color: #a1a8b8;
+        margin-top: 20px;
+      }
+      .footer {
+        position: absolute;
+        bottom: 40px;
+        left: 80px;
+        right: 80px;
+        border-top: 1px solid #303344;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        font:
+          14px Mono,
+          monospace;
+        color: #aaa7c5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slice"></div>
+    <main>
+      <p class="label">SOFTWARE / SYSTEMS / SCIENCE</p>
+      <h1>Samir Idris</h1>
+      <p class="handle">@scisamir</p>
+      <p class="roles">Software Engineer &bull; Blockchain Engineer</p>
+      <p class="summary">
+        Distributed systems / Blockchain / Computational biology
+      </p>
+    </main>
+    <div class="footer">
+      <span>samiridris.com</span><span>ENGINEERING / RESEARCH / BUILDING</span>
+    </div>
+  </body>
+</html>

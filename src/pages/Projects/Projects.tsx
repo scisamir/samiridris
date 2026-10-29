@@ -1,99 +1,180 @@
 import { useMemo, useState } from 'react';
+import { FiArrowDown, FiArrowUp, FiArrowUpRight } from 'react-icons/fi';
 import Project from './Project/Project';
 import MyProjects from '../../static/projects';
 import { ProjectGroup } from './Project/Project.type';
-
-import './styles.css'
+import Reveal from '../../components/Reveal';
+import SectionHeading from '../../components/SectionHeading';
+import './styles.css';
 
 type ProjectFilter = 'All' | ProjectGroup;
-
-const projectFilters: { label: string; value: ProjectFilter }[] = [
-    { label: 'ALL', value: 'All' },
-    { label: 'BLOCKCHAIN', value: 'Blockchain' },
-    { label: 'DEVOPS', value: 'DevOps' },
-    { label: 'BIOTECH', value: 'Biotech' },
-    { label: 'MISC', value: 'Misc' }
+const projectFilters: ProjectFilter[] = [
+  'All',
+  'Blockchain',
+  'DevOps',
+  'Biotech',
+  'Misc',
+];
+const initialCount = 6;
+const contributions = [
+  {
+    name: 'Minswap DEX',
+    description:
+      'Plutus V3 smart contract migration, CIP-113 support and protocol modernization.',
+    href: 'https://minswap.org/',
+  },
+  {
+    name: 'FluidTokens',
+    description:
+      'NFT fractionalization infrastructure and related protocol features.',
+  },
+  {
+    name: 'Metera',
+    description: 'Frontend engineering, integrations and ecosystem tooling.',
+    href: 'https://app.meteraprotocol.io/',
+  },
 ];
 
-const Projects = () => {
-    const [activeFilter, setActiveFilter] = useState<ProjectFilter>('All');
+export default function Projects({ archive = false }: { archive?: boolean }) {
+  const [activeFilter, setActiveFilter] = useState<ProjectFilter>('All');
+  const [expanded, setExpanded] = useState(archive);
+  const projects = useMemo(
+    () => MyProjects.filter((project) => !project.hidden),
+    [],
+  );
+  const filteredProjects = projects.filter(
+    (project) =>
+      activeFilter === 'All' || project.project_type === activeFilter,
+  );
+  const selectedProjects =
+    activeFilter === 'All' && projects.some((project) => project.featured)
+      ? filteredProjects.filter((project) => project.featured)
+      : filteredProjects;
+  const visibleProjects =
+    expanded || archive
+      ? filteredProjects
+      : selectedProjects.slice(0, initialCount);
 
-    const filteredProjects = useMemo(() => {
-        if (activeFilter === 'All') {
-            return MyProjects;
-        }
+  const toggleExpanded = () => {
+    if (expanded)
+      document
+        .getElementById('work-filters')
+        ?.scrollIntoView({ block: 'start' });
+    setExpanded(!expanded);
+  };
 
-        return MyProjects.filter((project) => project.project_type === activeFilter);
-    }, [activeFilter]);
-
-    const contributions = [
-        {
-            name: 'Minswap DEX',
-            description: 'Refactored smart contracts to Plutus V3, integrated CIP-113 support, and contributed to protocol modernization.'
-        },
-        {
-            name: 'FluidTokens',
-            description: 'Contributed to NFT fractionalization infrastructure and related features.'
-        },
-        {
-            name: 'Metera',
-            description: 'Contributed to frontend development, integrations, and ecosystem tooling.'
-        }
-    ];
-
-    return (
-        <section id="projects" className="sectionPad lightSection">
-            <div className="sectionHeading">
-                <p className="eyebrow">Selected projects & major contributions</p>
-                <h2>Work spanning Web3 protocols, DEX modernization, frontend products, DevOps systems, education, and biotech research.</h2>
+  return (
+    <section id="projects" className="section work-section">
+      <div className="container">
+        <Reveal>
+          <SectionHeading
+            number="04"
+            label="Selected projects & major contributions"
+            title="Engineering, in practice."
+            aside="Protocols, products, infrastructure and research. A selection of the work I've built or contributed to."
+          />
+        </Reveal>
+        <div id="work-filters" className="work-toolbar">
+          <div
+            className="project-filters"
+            role="group"
+            aria-label="Filter work by category"
+          >
+            {projectFilters.map((filter) => (
+              <button
+                key={filter}
+                type="button"
+                aria-pressed={activeFilter === filter}
+                onClick={() => {
+                  setActiveFilter(filter);
+                  setExpanded(false);
+                }}
+              >
+                {filter}
+                <span>
+                  {projects
+                    .filter(
+                      (project) =>
+                        filter === 'All' || project.project_type === filter,
+                    )
+                    .length.toString()
+                    .padStart(2, '0')}
+                </span>
+              </button>
+            ))}
+          </div>
+          <span className="work-count" aria-live="polite">
+            {String(visibleProjects.length).padStart(2, '0')} /{' '}
+            {String(filteredProjects.length).padStart(2, '0')}
+          </span>
+        </div>
+        <div className="projects-list" id="project-results">
+          {visibleProjects.length ? (
+            visibleProjects.map((project, index) => (
+              <Reveal key={project.p_head}>
+                <Project {...project} index={index + 1} />
+              </Reveal>
+            ))
+          ) : (
+            <p className="empty-projects">More work is on the way.</p>
+          )}
+        </div>
+        {!archive &&
+          filteredProjects.length >
+            Math.min(selectedProjects.length, initialCount) && (
+            <div className="work-expand">
+              <button
+                className="button"
+                type="button"
+                aria-expanded={expanded}
+                aria-controls="project-results"
+                onClick={toggleExpanded}
+              >
+                {expanded
+                  ? 'Show selected work'
+                  : 'View all ' + filteredProjects.length + ' projects'}
+                {expanded ? (
+                  <FiArrowUp aria-hidden="true" />
+                ) : (
+                  <FiArrowDown aria-hidden="true" />
+                )}
+              </button>
             </div>
-            <div className="projectFilters" aria-label="Filter projects by category">
-                {projectFilters.map((filter) => (
-                    <button
-                        key={filter.value}
-                        type="button"
-                        className={activeFilter === filter.value ? 'activeFilter' : ''}
-                        aria-pressed={activeFilter === filter.value}
-                        onClick={() => setActiveFilter(filter.value)}
+          )}
+        {!archive && (
+          <div className="work-archive-link">
+            <a className="text-link" href="/work">
+              Browse all engineering work
+              <FiArrowUpRight aria-hidden="true" />
+            </a>
+          </div>
+        )}
+        <div className="contributions">
+          <p className="eyebrow">More ecosystem contributions</p>
+          <div className="contribution-grid">
+            {contributions.map((contribution) => (
+              <article key={contribution.name}>
+                <h3>
+                  {contribution.href ? (
+                    <a
+                      className="text-link"
+                      href={contribution.href}
+                      target="_blank"
+                      rel="noreferrer"
                     >
-                        {filter.label}
-                    </button>
-                ))}
-            </div>
-            <div className="projectsGrid">
-                {filteredProjects &&
-                    filteredProjects.map((myproject) => {
-                        return (
-                            <Project
-                                key={myproject.p_head}
-                                image_src={myproject.image_src}
-                                category={myproject.category}
-                                p_head={myproject.p_head}
-                                description={myproject.description}
-                                tools={myproject.tools}
-                                site_link={myproject.site_link}
-                                github_link={myproject.github_link}
-                            />
-                        )
-                    })
-                }
-            </div>
-            <div className="contributions">
-                <div>
-                    <p className="eyebrow">Contributions</p>
-                    <h3>Additional ecosystem contributions</h3>
-                </div>
-                <div className="contributionGrid">
-                    {contributions.map((contribution) => (
-                        <article key={contribution.name}>
-                            <h4>{contribution.name}</h4>
-                            <p>{contribution.description}</p>
-                        </article>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+                      {contribution.name}
+                      <FiArrowUpRight aria-hidden="true" />
+                    </a>
+                  ) : (
+                    contribution.name
+                  )}
+                </h3>
+                <p>{contribution.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Projects;

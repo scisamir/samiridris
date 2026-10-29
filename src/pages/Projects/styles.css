@@ -1,108 +1,142 @@
-section#projects {
-    border-bottom: 1px solid var(--color-line);
+.work-section {
+  background: var(--bg-deep);
 }
-
-.projectFilters {
-    background: #ffffff;
-    border: 1px solid var(--color-line);
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: -18px auto 32px;
-    max-width: var(--max-width);
-    padding: 6px;
-    width: fit-content;
+.work-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 105px;
 }
-
-.projectFilters button {
-    background: transparent;
-    border: none;
-    border-radius: 6px;
-    color: var(--color-ink-soft);
-    cursor: pointer;
-    font-size: 0.78rem;
-    font-weight: 900;
-    letter-spacing: 0.04em;
-    min-height: 38px;
-    padding: 0 14px;
+.project-filters {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
-
-.projectFilters button.activeFilter {
-    background: var(--color-deep);
-    color: #f8f4ea;
+.project-filters button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 54px;
+  padding: 0 0 13px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  transition: color 0.2s;
 }
-
-.projectsGrid {
-    display: grid;
-    gap: 22px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin: 0 auto;
-    max-width: var(--max-width);
+.project-filters button span {
+  font: 400 9px var(--mono);
+  color: var(--subtle);
 }
-
+.project-filters button::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+.project-filters button[aria-pressed='true'],
+.project-filters button:hover {
+  color: var(--text);
+}
+.project-filters button[aria-pressed='true']::after {
+  transform: scaleX(1);
+}
+.project-filters button[aria-pressed='true'] span {
+  color: var(--accent);
+}
+.work-count {
+  font: 400 10px var(--mono);
+  color: var(--subtle);
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+.work-expand {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+}
+.work-archive-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+  color: var(--accent);
+}
+.archive-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-bottom: 64px;
+}
 .contributions {
-    background: var(--color-deep);
-    border-radius: 8px;
-    color: #f8f4ea;
-    display: grid;
-    gap: 28px;
-    grid-template-columns: 280px minmax(0, 1fr);
-    margin: 48px auto 0;
-    max-width: var(--max-width);
-    padding: 32px;
-    text-align: left;
+  margin-top: 68px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
 }
-
-.contributions h3 {
-    color: #ffffff;
-    font-size: 1.45rem;
-    line-height: 1.2;
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 22px;
 }
-
-.contributionGrid {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.contribution-grid h3 {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 15px;
+  font-weight: 500;
 }
-
-.contributionGrid article {
-    border: 1px solid rgba(248, 244, 234, 0.14);
-    border-radius: 8px;
-    padding: 18px;
+.contribution-grid .text-link {
+  font-size: 15px;
+  width: 100%;
+  justify-content: space-between;
 }
-
-.contributionGrid h4 {
-    color: #f0b469;
-    font-size: 1rem;
-    margin-bottom: 8px;
+.contribution-grid p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 7px;
 }
-
-.contributionGrid p {
-    color: #dbe8e4;
-    font-size: 0.92rem;
+.empty-projects {
+  padding-block: 50px;
+  color: var(--muted);
 }
-
-@media screen and (max-width: 960px) {
-    .projectsGrid,
-    .contributions,
-    .contributionGrid {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 600px) {
+  .work-toolbar {
+    gap: 10px;
+  }
+  .project-filters {
+    gap: 19px;
+  }
+  .project-filters button {
+    font-size: 10px;
+    gap: 5px;
+  }
+  .project-filters button span {
+    font-size: 8px;
+  }
+  .work-count {
+    display: none;
+  }
+  .contribution-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .contributions {
+    margin-top: 48px;
+  }
 }
-
-@media screen and (max-width: 480px) {
-    .projectFilters {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .projectFilters button {
-        flex: 1 1 45%;
-        padding: 0 10px;
-    }
-
-    .contributions {
-        padding: 24px;
-    }
+@media (max-width: 359px) {
+  .project-filters {
+    gap: 12px;
+  }
 }

@@ -2,16 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/root.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Samir Idris is a Software Engineer, Blockchain Developer, Web3 Builder, and AI & Biotechnology enthusiast."/>
-    <meta property="og:title" content="Samir Idris"/>
-    <meta property="og:description" content="Software Engineer | Blockchain Developer | Web3 Builder | AI & Biotechnology Enthusiast"/>
-    <meta property="og:image" content="/myPix.jpg"/>
-    <title>Samir Idris</title>
+    <meta name="theme-color" content="#0d1117" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="preload"
+      href="/fonts/space-grotesk-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <!--seo-head-->
+    <noscript>
+      <style>
+        .hero-motion-toggle,
+        .project-filters,
+        .work-expand,
+        .contact-form {
+          display: none !important;
+        }
+        @media (max-width: 760px) {
+          .site-header {
+            height: auto;
+            position: relative;
+          }
+          .nav-inner {
+            flex-wrap: wrap;
+            padding-block: 16px;
+          }
+          .site-header .menu-toggle {
+            display: none;
+          }
+          .site-header .nav-links {
+            display: flex;
+            position: static;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 8px 18px;
+            padding: 0;
+            border: 0;
+            box-shadow: none;
+          }
+          .site-header .nav-links a {
+            min-height: 36px;
+            font-size: 12px;
+          }
+          .site-header .nav-links .nav-cv {
+            margin: 0;
+            padding: 0;
+            border: 0;
+          }
+        }
+      </style>
+    </noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
